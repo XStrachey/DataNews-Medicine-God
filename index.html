@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>药神</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="" />
+
+<script src="js/code/highcharts.js"></script>
+<script src="js/code/highcharts-more.js"></script>
+<script src="js/code/modules/exporting.js"></script>
+<script src="js/code/themes/grid-light.js"></script>
+<!--
+<script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/highcharts-more.js"></script>
+<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+-->
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+
+<link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- portfolio -->	
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="all">
+<!-- //portfolio -->	
+<!-- font -->
+<link href="http://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script> 
+
+<style type="text/css">
+	.num{
+		width: 33px; 
+    	height: 47px; 
+		font-size: 30px;
+		font-family: "Times New Roman";
+	}
+</style>
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner jarallax">
+		<div class="agileinfo-dot">
+			<div class="header-top">
+				<div class="header">
+					<div class="header-top-info">
+						<nav class="navbar navbar-default">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<div class="agileits-logo">
+									<h1><a>药神</a></h1>
+								</div>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+								<nav>
+									<ul class="nav navbar-nav">
+										<li class="active"><a href="index.html">背景</a></li>
+										<li><a href="#about" class="scroll">现状</a></li>
+										<li><a href="#services" class="scroll">解读</a></li>
+										<li><a href="#gallery" class="scroll">一些东西</a></li>
+										<li><a href="#team" class="scroll">呼吁</a></li>
+										<li><a href="#events" class="scroll">尾声</a></li>
+										<li><a href="#mail" class="scroll">怎么办</a></li>
+									</ul>
+								</nav>
+							</div>
+							<!-- /.navbar-collapse -->
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="w3layouts-banner-info">
+				<div class="container">
+					<div class="w3layouts-banner-slider">
+						<div class="w3layouts-banner-top-slider">
+							<div class="slider">
+								<div class="callbacks_container">
+									<ul class="rslides callbacks callbacks1" id="slider4">
+										<li>
+											<div class="w3ls-text">
+												<div class="w3ls-text-info">
+													<p>2018年暑假</br>
+													有一句话击中了几乎所有人的痛点</br>
+														<i>“这世界上只有一种病，穷病。”</i></br>
+													</p>
+													<p style="text-align:right;">
+														<i>——文牧野</i>
+													</p>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="w3ls-text">
+												<div class="w3ls-text-info">
+													<p style="text-align:justify;">这句话正正是出自由现实题材改编的电影《我不是药神》：一个家境殷实却因为重病付不起天价药的男人，铤而走险去印度买仿制药吊命，并且好心以低价卖给广大病友，然而电影的结局以主角被判刑入狱为句号。</br>
+													</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="clearfix"> </div>
+								<script src="js/responsiveslides.min.js"></script>
+								<script>
+									// You can also use "$(window).load(function() {"
+									$(function () {
+									  // Slideshow 4
+									  $("#slider4").responsiveSlides({
+										auto: true,
+										pager:true,
+										nav:true,
+										speed: 500,
+										namespace: "callbacks",
+										before: function () {
+										  $('.events').append("<li>before event fired.</li>");
+										},
+										after: function () {
+										  $('.events').append("<li>after event fired.</li>");
+										}
+									  });
+								
+									});
+								 </script>
+								<!--banner Slider starts Here-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	<!-- services -->
+	<div class="services" id="background">
+		<div class="container">
+			<div class="agileits-heading">
+				<div class="col-md-4 text-center">
+					<h3>人数</h3>
+					<span class="num" data-num="1234567"></span>
+				</div>
+				<div class="col-md-4 text-center">
+					<h3>医院</h3>
+					<span class="num" data-num="1457"></span>
+				</div>
+				<div class="col-md-4 text-center">
+					<h3>药品</h3>
+					<span class="num" data-num="14554567"></span>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+			<div class="agileinfo-about-info" style="font-family:SimHei; font-size:28px;">
+				<p>2018年暑假，有一句话击中了几乎所有人的痛点。</br>
+				<i>“这世界上只有一种病，穷病。——文牧野”</i>
+				</p>
+			</div>
+			<div class="agileinfo-about-info" id="paragraph1">
+				<p style="text-align:justify; text-indent: 2em; font-size: 16px;">这句话正正是出自由现实题材改编的电影《我不是药神》：一个家境殷实却因为重病付不起天价药的男人，铤而走险去印度买仿制药吊命，并且好心以低价卖给广大病友，然而电影的结局以主角被判刑入狱为句号。</br>
+				</p>
+				<p style="text-align: justify;text-indent: 2em; font-size: 16px;">身患重病，治不起病，最终冒险帮人还要被判刑？</p>
+				<p style="text-align: justify;text-indent: 2em; font-size: 16px;">这三者的叠加效应引发的“天价药恐慌“，”治疗经济危机“无不触动了大众的神经。</p>
+				<p style="text-align: justify;text-indent: 2em; font-size: 16px;">经由各大媒体的渲染和呼吁，关于《我不是药神》的舆情几乎都往“天价药“”重病“”加快医疗改革“方面倾倒。一时之间，对于医疗问题的焦虑迅速蔓延到全国各地。
+				</p>
+				<p style="text-align: justify;text-indent: 2em; font-size: 16px;"><b>大家呵壁问天：<a id="question1" href="javascript:void(0);" onclick="hideParagraph1();">来拯救我们的药神在哪里？</a></b></p>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="agileinfo-about-info" id="paragraph2" style="display:none;">
+				<p style="font-size: 36px;"><b>却鲜少有人意识到，其实中国早已不需要药神。</b></p>
+			</div>
+		</div>
+	</div>
+	<!-- //services -->
+	<!-- welcome -->
+	<div class="welcome" id="about">
+		<div class="container">
+			<div class="agileits-heading">
+				<h3>标题</h3> 
+			</div>
+			<div class="agileinfo-about-info">
+				<h4>定价原则</h4>
+				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">从根源上看来，中国社会对药神的呼唤往往始于“高价药恐慌”，大家都害怕自己会成为那个患病买不起高价药的人。有人因此将矛头对准药企，认为企业定价过高，导致患者吃不起。甚至电影就有有意把格列卫药企塑造成“为谋取药品暴利而置病人生死于不顾”的冷血形象。但是，实际情况到底是怎样的呢？中国社会科学院社会学所社会政策研究室副主任、研究员房莉杰认为，“这个锅不应该药企背。”
+				</p>
+			</div>
+			<div class="welcome-agileinfo">
+				<div class="col-md-6 col-sm-6 col-xs-6 welcome-grids">
+					<div class="view view-w3-agile">
+						<img src="images/pocily1.jpg" alt="" class="img-responsive" />
+						<div class="agileits-w3layouts-mask">
+							<h4 style="font-size: 20px;">10年，10亿美元</h4>
+							<p style="text-align:justify; text-indent: 2em; font-size: 12px; padding: 20px;">这是医药圈著名的“双十定律”，代表一款新药研发成功平均耗时成本和经济成本。以影片中的格列卫为例，格列卫从研发伊始到上市，用时50年，投资超50亿美元。究其原因，在于国际对于药品研发和开发的审核标准极其严苛，其目的也是为了最大程度保护药物的安全性和科学性。为了通过严苛的审核程序，药企必须不断投入大量科研经费以及人力物力。从研发阶段到开发阶段最后到完全审核通过，往往要超过十年。在开发阶段当中，从一期、二期最后是三期检测，每一次检测药企都等于在高空钢索上走了一趟。因为一旦某个流程审批不过关，就等于之前的努力成果全部付之东流，必须“回炉重造”。其中耗费的时间成本和资金，可想而知。
+							</p>
+							<p style="text-align:justify; text-indent: 2em; font-size: 12px; padding: 20px;">“企业研发投入大，但新品研发成功率不到2%，企业需通过高定价收回前期投入。”国家卫健委药政司司长于竞进曾对高药价成因作出解释。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 welcome-grids">
+					<div class="view view-w3-agile">
+						<img src="images/pocily2.jpg" alt="" class="img-responsive" />
+						<div class="agileits-w3layouts-mask">
+							<h4 style="font-size: 20px;">市场局限性</h4>
+							<p style="text-align:justify; text-indent: 2em; font-size: 12px; padding: 20px;">以性粒细胞白血病为例，这种发病率为0.39~0.55/10万的疾病并不常见，在成年白血病病人中，只有约20%属于慢粒。这说明，一款面向重病的新药就算到达向市场推广的阶段，其消费市场也是相当有限的。因为很多重病病种属于低概率事件，有购买需求和购买能力的病患少之又少，为了保证一定的利润空间，药企只能选择提升药品单价来达到总收益的平衡。
+							</p>
+							<p style="text-align:justify; text-indent: 2em; font-size: 12px; padding: 20px;">所以并非所有高价药都应该遭受批判，由于凝结了智力成果，它们的定价遵循一定规则，也遵循基本的逐利原则。否则如果对高价药一竹竿打死，就不存在对于新药研发的利润刺激，最终只会导致药物创新缺乏驱动力。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //welcome -->
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal-keywords1" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">何谓药价谈判？</h4>
+				</div> 
+				<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="images/keywords.jpg" alt="" />
+						<p style="text-align:justify; text-indent: 2em;">事实上，就是医保部门根据病患需求和市场调研开出合适的药品谈判清单，被列入谈判清单的药品企业要向医保部门上交申请材料。由医保部门出面和药企商议价格，这个价格即为当地医院向该药企采购药品的标准价格。
+						</p>
+						<p style="text-align:justify; text-indent: 2em;">如此一来，政府无形中就能够“砍掉”药企由于市场调节自发性而产生“虚高”的那一部分医药价格。因此，病患在医院中买到的药基本上都是在政府干预和控制下的基础价格。
+						</p>
+						<p style="text-align:justify; text-indent: 2em;">而政府此前，为了让医保覆盖到更多病种，实行了扩大医保目录的政策，其采用的主要手段也是药价谈判。
+						</p>
+						<p style="text-align:justify; text-indent: 2em;">从医保目录清单看来，被纳入2017版的药品目录无论在数量还是种类方面都比2009版有较大的上升幅度。
+						</p>
+						<p style="text-align:justify; text-indent: 2em;">这意味着，民众所患疾病，有越来越多的病种能够享受到医疗保障，这无疑给许多重病家庭卸下了很大一部分经济负担。
+						</p>
+						<p style="text-align:justify; text-indent: 2em;">但在这其中，政府给予的财政补贴并不足以支付扩大医保目录之后的昂贵医疗费用，所以政府采取的主要措施就是上文所提到的药价谈判。
+						</p>
+						<p style="text-align:justify; text-indent: 2em;">每一个被列入医保谈判名单里的药企都要面临医保部门牵头的谈判。被列入医保谈判名单——说明这款药广受大众所需，与此同时，说明政府认为这款药物定价太高了，要在谈判中削减一部分，直到达到政府认为满意的价位。
+						</p>
+						<p style="text-align:justify; text-indent: 2em;">通过这样的方式，政府已经将越来越多的药物压低到民众能够承受的价格，病患在医保扩容后享受的优惠，本质上就是能够用更低的价格享受到和以前相同的疗效。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal-keywords2" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">何谓药价加成？</h4>
+				</div> 
+				<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="images/keywords.jpg" alt=""/>
+						<p style="text-align:justify; text-indent: 2em;">此前，由于在我国公立医院支出中，政府投入只占7%，有的三甲医院甚至只有3%，剩下的支出均要靠医院自筹解决。医院通过15%的药品价格加成收入来弥补政府财政投入不足，以维持医院所需的运用和发展费用。
+						</p>
+						<p style="text-align:justify; text-indent: 2em;">取消药品加成后，公立医院因取消药品和医用耗材加成而减少收入的10%，按照属地管理的原则由财政专项补偿。但是主要方式还是医院自行削减各项开支，自我消化。
+						</p>
+						<p style="text-align:justify; text-indent: 2em;">这样一来，从药企到医院再到患者，这三环药价都被层层削减，患者能够从医院买到的药品，接受的医疗服务，其价格较之前，已经是到达了药价过山车俯冲式下降的阶段了。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- services -->
+	<div class="services" id="services">
+		<div class="container">
+			<div class="agileits-heading">
+				<h3>解读</h3> 
+			</div>
+			<div class="specialty-grids-top">
+				<div class="col-md-4 service-box" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<a href="#" data-toggle="modal" data-target="#myModal-example">
+						<figure class="icon">
+							<i class="fa fa-ambulance" aria-hidden="true"></i>
+						</figure>
+					</a>
+					<h5>企业与政府之间的博弈</h5>
+					<p>压价没有一个科学的标准</p>
+				</div>
+				<div class="col-md-4 service-box">
+					<figure class="icon">
+						<i class="fa fa-wheelchair" aria-hidden="true"></i>
+					</figure>
+					<h5>医院的生存困境</h5>
+					<p>资金压力带来的医护人员压力：诊金低+工作量大</p>
+				</div>
+				<div class="col-md-4 service-box">
+					<figure class="icon">
+						<i class="fa fa-user-md" aria-hidden="true"></i>					
+					</figure>
+					<h5>医疗改革的砝码嫁到了医院的医务人员之上</h5>
+					<p>医院面临的资金压力和医务人员的工作压力是一个全国普遍存在的现象</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //services -->
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal-example" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+					<h4 class="modal-title">药 <span>神</span></h4>
+				</div> 
+				<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="images/1.jpg" alt="" />
+						<p>北京朝阳医院试点（及你估计发达地区的三甲医院10000项项目只有百分之一二是能够达到收支平衡，其他都是亏本的）</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- portfolio -->
+	<div class="portfolio" id="gallery">
+		<div class="container">
+			<div class="agileits-heading">
+				<h3>医改箭在弦上，风雨十五年</h3> 
+			</div>
+			<h4 style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 15px;">药价飘忽不定宛如过山车，民众的心脏也随着这辆过山车忽高忽低。中国政府意识到问题的严重性，早在2007年开始加速医疗改革，整治药价乱象。只不过，野火烧不尽春风吹又生。被爆出来的丑闻永远是逃出政策以外的漏网之鱼。其实从2003年医疗改革以来，中国的政府一直在和虚高的药价奋力斗争。
+			</h4>
+			<ul class="simplefilter w3layouts agileits">
+				<li class="active w3layouts agileits" data-filter="all">全部</li>
+				<li class="w3layouts agileits" data-filter="1">药价谈判</li>
+				<li class="w3layouts agileits" data-filter="2">扩大医保目录</li>
+				<li class="w3layouts agileits" data-filter="3">取消药品加成</li>
+			</ul>
+			
+			<div class="filtr-container w3layouts agileits">
+				<div class="filtr-item w3layouts agileits" data-category="1" data-sort="orz">
+					<div class="col-md-6" id="container-expenditure-ratio" style="min-width:400px;height:400px"></div>
+					<div class="col-md-6 text-center" style="text-indent: 2em; padding: 15px;">
+						<p style="text-align:justify; font-size: 16px;">为了整治药品乱开价的现象，中国政府制定了一系列关于药价谈判的政策。何谓药价谈判？
+						</p>
+						<p style="text-align:justify; font-size: 16px;">事实上，就是医保部门根据病患需求和市场调研开出合适的药品谈判清单，被列入谈判清单的药品企业要向医保部门上交申请材料。由医保部门出面和药企商议价格，这个价格即为当地医院向该药企采购药品的标准价格。
+						</p>
+						<p style="text-align:justify; font-size: 16px;">如此一来，政府无形中就能够“砍掉”药企由于市场调节自发性而产生“虚高”的那一部分医药价格。因此，病患在医院中买到的药基本上都是在政府干预和控制下的基础价格。
+						</p>
+					</div>
+				</div>
+				<!---->
+				<div class="clearfix"></div>
+				<div class="filtr-item w3layouts agileits" data-category="2" data-sort="omg">
+					<div class="col-md-6 text-center" style="text-indent: 2em; padding: 15px;">
+						<p style="text-align:justify; font-size: 16px;">而政府此前，为了让医保覆盖到更多病种，实行了扩大医保目录的政策，其采用的主要手段也是药价谈判。
+						</p>
+						<p style="text-align:justify; font-size: 16px;">从医保目录清单看来，被纳入2017版的药品目录无论在数量还是种类方面都比2009版有较大的上升幅度。这意味着，民众所患疾病，有越来越多的病种能够享受到医疗保障，这无疑给许多重病家庭卸下了很大一部分经济负担。
+						</p>
+						<p style="text-align:justify; font-size: 16px;">但在这其中，政府给予的财政补贴并不足以支付扩大医保目录之后的昂贵医疗费用，所以政府采取的主要措施就是上文所提到的药价谈判。每一个被列入医保谈判名单里的药企都要面临医保部门牵头的谈判。被列入医保谈判名单——说明这款药广受大众所需，与此同时，说明政府认为这款药物定价太高了，要在谈判中削减一部分，直到达到政府认为满意的价位。通过这样的方式，政府已经将越来越多的药物压低到民众能够承受的价格，病患在医保扩容后享受的优惠，本质上就是能够用更低的价格享受到和以前相同的疗效。
+						</p>
+					</div>
+					<div class="col-md-6" id="container-2016-spend" style="min-width:200px;height:400px"></div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="filtr-item w3layouts agileits" data-category="3" data-sort="omg">
+					<div class="col-md-6" id="container-2009-2017-medical-insurance-catalog" style="min-width:200px;height:400px"></div>
+					<div class="col-md-6 text-center" style="text-indent: 2em; padding: 15px;">
+						<p style="text-align:justify; font-size: 16px;">不但如此，为了推进医保改革，进一步减少民众医疗负担，国家在2016年直接取消了延续了12年的药品加成许可。医院在出售西药方面的利润直接降为0，因为取消药价加成就意味着医院以多少钱的价格从药企采购药品，就要以多少钱的价格出售给患者，再也不允许从中赚取差价。
+						</p>
+						<p style="text-align:justify; font-size: 16px;">此前，由于在我国公立医院支出中，政府投入只占7%，有的三甲医院甚至只有3%，剩下的支出均要靠医院自筹解决。医院通过15%的药品价格加成收入来弥补政府财政投入不足，以维持医院所需的运用和发展费用。取消药品加成后，公立医院因取消药品和医用耗材加成而减少收入的10%，按照属地管理的原则由财政专项补偿。但是主要方式还是医院自行削减各项开支，自我消化。
+						</p>
+						<p style="text-align:justify; font-size: 16px;">这样一来，从药企到医院再到患者，这三环药价都被层层削减，患者能够从医院买到的药品，接受的医疗服务，其价格较之前，已经有了很大的下降幅度。
+						</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //portfolio -->
+	<!-- team -->
+	<div class="jarallax team" id="team">
+		<div class="team-dot">
+			<div class="container">
+				<div class="agileits-heading team-heading">
+					<h3>数据</h3>
+				</div>
+				<div class="agileits-team-grids">
+					<div id="container-avg-expenditure-ratio" style="min-width:400px;height:400px"></div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //team -->
+	<!-- events -->
+	<div class="w3-events" id="events"> 
+		<div class="container">
+			<div class="agileits-heading">
+				<h3>十五年医改，成效显著</h3>
+			</div>
+			<div class="agileinfo-about-info">
+				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">经过医保政策的不断调整，政府在医改中已经取得了巨大的成效。最显著的变化就在于，民众的医保覆盖面扩大了。与此同时，民众的医保标准不降反升。中国政府的改革巨轮行驶在历史的蓝海上，每一个沉重的步伐背后都有掀起层层浪花。
+				</p>
+			</div>
+			<div class="events-info">
+				<div class="col-md-6 event-grids">
+					<div class="w3layouts-text">
+						<div id="container-medical-insurance-GDP-rotion" style="min-width:400px;height:400px"></div>
+						<h6><a href="#" data-toggle="modal" data-target="#myModal">医保覆盖面不断扩大</a></h6>
+						<div class="clearfix"> </div>
+					</div>
+					<p>确实存在部分药品难以承受压价带来利润空间倒缩</p>
+				</div>
+				<div class="col-md-6 event-grids">
+					<div class="w3layouts-text">
+						<h6><a href="#" data-toggle="modal" data-target="#myModal2">医保标准不断提高</a></h6>
+						<div class="clearfix"> </div>
+					</div>
+					<p>甲磺酸伊马替尼片，适应症为：用于治疗费城染色体阳性的慢性髓性白血病(Ph+CML)的慢性期、加速期或急变期；用于治疗不能切除和/或发生转移的恶性胃肠道间质肿瘤(GIST)的成人患者。</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div> 
+	</div> 
+	<!-- //events -->
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+					<h4 class="modal-title">药 <span>神</span></h4>
+				</div> 
+				<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="images/1.jpg" alt="" />
+						<p>方中牛黄味苦气凉，入肝、心经，功善清热凉心解毒，以之为主药。生石膏味辛能散，气大寒可清热，清热泻火，除烦止渴；黄芩味苦气寒，清热燥湿，泻火解毒；大黄苦寒沉降，清热泻火，泻下通便，共为辅药。雄黄、冰片清热解毒，消肿止痛；桔梗味苦辛，入肺经，宣肺利咽，共为佐药。甘草味甘性平，调和诸药，为使药。诸药合用，共奏清热解毒泻火之效。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- modal -->
+	<div class="modal about-modal fade" id="myModal2" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"> 
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+					<h4 class="modal-title">药 <span>神</span></h4>
+				</div> 
+				<div class="modal-body">
+					<div class="agileits-w3layouts-info">
+						<img src="images/1.jpg" alt="" />
+						<p>晚期恶性肿瘤患者可能会出现相互混杂的临床症状，但由于它们与潜在疾病、疾病本身进展、以及同时服用多种药物有关，因此常难以明确它们的因果关系。
+　　一般来说，包括儿科在内的CML患者长期每日口服本品的耐受性较好。大多数成年患者在治疗的某一时间点会发生不良事件，但绝大多数为轻至中度，且临床试验中仅2.4%的新诊断患者、4%干扰素治疗失败的晚期慢性期患者、4%干扰素治疗失败的加速期患者以及5%干扰素治疗失败的急变期患者因药物相关性不良事件导致治疗中断。GIST研究中，4%的患者因药物相关性不良事件而中断本品治疗。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->
+	<!-- newsletter -->
+	<div class="newsletter jarallax-new">
+		<div class="w3-agile-newsletter">
+			<div class="container" style="color: #f8f8ff">
+				<div class="col-md-4">
+					<p>晚期恶性肿瘤患者可能会出现相互混杂的临床症状，但由于它们与潜在疾病、疾病本身进展、以及同时服用多种药物有关，因此常难以明确它们的因果关系。
+</br>　　一般来说，包括儿科在内的CML患者长期每日口服本品的耐受性较好。大多数成年患者在治疗的某一时间点会发生不良事件，但绝大多数为轻至中度，且临床试验中仅2.4%的新诊断患者、4%干扰素治疗失败的晚期慢性期患者、4%干扰素治疗失败的加速期患者以及5%干扰素治疗失败的急变期患者因药物相关性不良事件导致治疗中断。GIST研究中，4%的患者因药物相关性不良事件而中断本品治疗。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //newsletter -->
+	<!-- contact -->
+	<div class="contact" id="mail">
+		<div class="container">
+			<div class="agileits-heading">
+				<h3>怎么办</h3>
+			</div>
+			<div class="w3layouts-contact-grids">
+				
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<footer>
+		<div class="container" style="text-align: center; color: #f8f8ff">
+			<p>数据新闻制作组</p>
+		</div>
+	</footer>
+	<!-- //footer -->
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		}),
+		$('.jarallax-new').jarallax({
+			speed: 0.5,
+			imgSrc: "images/1.jpg",
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- Tabs-JavaScript -->
+	<script src="js/jquery.filterizr.js"></script>
+		<script src="js/controls.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.filtr-container').filterizr();
+			});
+		</script>
+	<!-- //Tabs-JavaScript -->
+	<!-- PopUp-Box-JavaScript -->
+		<script src="js/jquery.chocolat.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.filtr-item a').Chocolat();
+			});
+		</script>
+	<!-- //PopUp-Box-JavaScript -->
+	<script src="js/jquery.numscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(".num").numScroll();
+	</script>
+</body>	
+</html>
+
+<script type="text/javascript">
+	function hideParagraph1(){
+		$("#paragraph1").hide(600);
+		$("#paragraph2").show(100);
+	}
+</script>
+<script>
+	var chart = Highcharts.chart('container-2016-spend', {
+	chart: {
+		type: 'bubble',
+		zoomType: 'xy'
+	},
+	title: {
+		text: '2016年卫生支出费用与实际花费金额'
+	},
+	series: [{
+		name:'中国',
+		// 每个气泡包含三个值，x，y，z；其中 x，y用于定位，z 用于计算气泡大小
+		data: [[6, 21, 11.19]]
+	},{
+		name:'美国',
+		data: [[16, 31, 16.62]]
+	},{
+		name:'香港',
+		data: [[5, 21, 0.32]]
+	},{
+		name:'日本',
+		data: [[10, 22, 4.95]]
+	},{
+		name:'加拿大',
+		data: [[10, 28, 1.54]]
+	},{
+		name:'英国',
+		data: [[9, 19, 2.65]]
+	},{
+		name:'德国',
+		data: [[11, 20, 3.48]]
+	}]
+});
+</script>
+
+<script>
+	// Build the chart
+Highcharts.chart('container-expenditure-ratio', {
+	chart: {
+		plotBackgroundColor: null,
+		plotBorderWidth: null,
+		plotShadow: false,
+		type: 'pie'
+	},
+	title: {
+		text: '美国医疗服务资金支出占比'
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: false
+			},
+			showInLegend: true
+		}
+	},
+	series: [{
+		name: 'Brands',
+		colorByPoint: true,
+		data: [{
+			name: 'Hospitals',
+			y: 33,
+			sliced: true,
+			selected: true
+		}, {
+			name: 'Home health',
+			y: 3
+		}, {
+			name: 'Dental',
+			y: 4
+		}, {
+			name: 'Nursing care',
+			y: 5
+		}, {
+			name: 'Prescription drug',
+			y: 10
+		},  {
+			name: 'Physicians &clinics',
+			y: 20
+		},{
+			name: 'Other',
+			y: 27
+		}]
+	}]
+});
+</script>
+
+<script>
+	var chart = Highcharts.chart('container-avg-expenditure-ratio',{
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: '医疗支出占GDP的比重'
+	},
+	subtitle: {
+		text: '数据来源: *******.com'
+	},
+	xAxis: {
+		categories: [
+			'中国','美国','英国','德国','加拿大','日本'
+		],
+		crosshair: true
+	},
+	yAxis: {
+		min: 0,
+		title: {
+			text: '医疗支出占GDP的比重'
+		}
+	},
+	tooltip: {
+		// head + 每个 point + footer 拼接成完整的 table
+		headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+		pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+		'<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+		footerFormat: '</table>',
+		shared: true,
+		useHTML: true
+	},
+	plotOptions: {
+		column: {
+			borderWidth: 0
+		}
+	},
+	series: [{
+		name: '2015年',
+		data: [5.6, 11.9, 9.8, 11.1, 10.1, 11.2]
+	}, {
+		name: '2016年',
+		data: [6, 16, 9, 11, 10, 10]
+	}]
+});
+</script>
+
+<script>
+	var chart = Highcharts.chart('container-2009-2017-medical-insurance-catalog',{
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: '医保覆盖面扩大'
+	},
+	subtitle: {
+		text: '数据来源: '
+	},
+	xAxis: {
+		categories: [
+			'甲类西成药','甲类中成药','乙类西成药','乙类中成药'
+		],
+		crosshair: true
+	},
+	yAxis: {
+		min: 0,
+		title: {
+			text: '药品目录'
+		}
+	},
+	tooltip: {
+		// head + 每个 point + footer 拼接成完整的 table
+		headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+		pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+		'<td style="padding:0"><b>{point.y:.0f} 种</b></td></tr>',
+		footerFormat: '</table>',
+		shared: true,
+		useHTML: true
+	},
+	plotOptions: {
+		column: {
+			borderWidth: 0
+		}
+	},
+	series: [{
+		name: '2009版',
+		data: [349, 154, 791, 886]
+	}, {
+		name: '2017版',
+		data: [402, 192, 886, 1046]
+	}]
+});
+</script>
+
+<script>
+	var chart = Highcharts.chart('container-medical-insurance-GDP-rotion', {
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: '医疗卫生支出占GDP总额'
+	},
+	xAxis: {
+		categories: [
+			'美国',
+			'中国',
+			'日本',
+			'德国',
+			'法国',
+			'英国',
+			'意大利',
+			'加拿大',
+			'韩国',
+			'俄罗斯'
+		]
+	},
+	yAxis: [{
+		min: 0,
+		title: {
+			text: ''
+		}
+	}, {
+		title: {
+			text: '万亿'
+		},
+		opposite: true
+	}],
+	legend: {
+		shadow: false
+	},
+	tooltip: {
+		shared: true
+	},
+	plotOptions: {
+		column: {
+			grouping: false,
+			shadow: false,
+			borderWidth: 0
+		}
+	},
+	series: [ {
+		name: 'GDP',
+		color: 'rgba(248,161,63,1)',
+		data: [19.3, 12.2, 4.9,3.65,2.57,2.56,1.92,1.64, 1.53,1.47],
+		tooltip: {  // 为当前数据列指定特定的 tooltip 选项
+			valuePrefix: '$',
+			valueSuffix: ' MB'
+		},
+		pointPadding: 0.3,
+		pointPlacement: 0.2,
+		yAxis: 1  // 指定数据列所在的 yAxis
+	}, {
+		name: '医疗卫生支出',
+		color: 'rgba(186,60,61,.9)',
+		data: [3.28, 0.244, 0.539, 0.438, 0.3084, 0.2304, 0.173, 0.18,0.122,0.118],
+		tooltip: {
+			valuePrefix: '$',
+			valueSuffix: ' MB'
+		},
+		pointPadding: 0.4,
+		pointPlacement: 0.2,
+		yAxis: 1
+	}]
+});
+</script>

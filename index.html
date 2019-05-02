@@ -6,10 +6,16 @@
 <meta charset="utf-8">
 <meta name="keywords" content="" />
 
-<script src="js/code/highcharts.js"></script>
-<script src="js/code/highcharts-more.js"></script>
-<script src="js/code/modules/exporting.js"></script>
-<script src="js/code/themes/grid-light.js"></script>
+<script src="js/Highcharts-7.1.1/code/highcharts.js"></script>
+<script src="js/Highcharts-7.1.1/code/highcharts-more.js"></script>
+<script src="js/Highcharts-7.1.1/code/modules/exporting.js"></script>
+<script src="js/Highcharts-7.1.1/code/themes/grid-light.js"></script>
+<script src="js/Highcharts-7.1.1/code/modules/series-label.js"></script>
+<script src="js/Highcharts-7.1.1/code/modules/oldie.js"></script>
+
+<script src="js/Highmaps-7.1.1/code/modules/map.js"></script>
+<script src="https://img.hcharts.cn/highmaps/highmaps.js"></script>
+<script src="https://data.jianshukeji.com/geochina/china.js"></script>
 <!--
 <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
 <script src="https://code.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
@@ -493,6 +499,7 @@
 	</div>
 	<!-- //modal -->
 	<!-- newsletter -->
+	<!--蒙板在style.css-->
 	<div class="newsletter jarallax-new">
 		<div class="w3-agile-newsletter">
 			<div class="container" style="color: #f8f8ff">
@@ -511,7 +518,11 @@
 				<h3>怎么办</h3>
 			</div>
 			<div class="w3layouts-contact-grids">
-				
+				<div id="map" style="width:800px;height: 500px;"></div>
+				<div id="container-medicine-distribution-link-price-increase" style="min-width:400px;height:400px"></div>
+				<div id="container-Guangdong-hospital-service-tendency-2015-2017" style="max-width:800px;height:400px"></div>
+				<div id="container-Guangdong-public-hospital-medical-income-cost-structure" style="min-width:400px;height:400px"></div>
+				<div id="container-Guangdong-hospital-revenue-expenditure-growth" style="min-width:400px;height:400px"></div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
@@ -842,6 +853,287 @@ Highcharts.chart('container-expenditure-ratio', {
 		pointPadding: 0.4,
 		pointPlacement: 0.2,
 		yAxis: 1
+	}]
+});
+</script>
+
+<script>
+// 随机数据
+var data = [{"name":"北京","value":null},{"name":"天津","value":104.50},{"name":"河北","value":null},{"name":"山西","value":null},{"name":"内蒙古","value":88.70},{"name":"辽宁","value":null},{"name":"吉林","value":null},{"name":"黑龙江","value":93.05},{"name":"上海","value":null},{"name":"江苏","value":null},{"name":"浙江","value":null},{"name":"安徽","value":null},{"name":"福建","value":80.17},{"name":"江西","value":null},{"name":"山东","value":108.40},{"name":"河南","value":null},{"name":"湖北","value":226.27},{"name":"湖南","value":null},{"name":"广东","value":77.00},{"name":"广西","value":105.95},{"name":"海南","value":null},{"name":"重庆","value":null},{"name":"四川","value":96.85},{"name":"贵州","value":null},{"name":"云南","value":null},{"name":"西藏","value":null},{"name":"陕西","value":null},{"name":"甘肃","value":null},{"name":"青海","value":null},{"name":"宁夏","value":282.64},{"name":"新疆","value":null},{"name":"台湾","value":null},{"name":"香港","value":null},{"name":"澳门","value":null},{"name":"南海诸岛","value":null},{"name":"南海诸岛","value":null}];
+// 初始化图表
+var map = new Highcharts.Map('map', {
+  title: {
+    text: '药价地区差异显著'
+  },
+  colorAxis: {
+    min: 0,
+    minColor: 'rgb(255,255,255)',
+    maxColor: '#eb0b0f'
+  },
+  series: [{
+    data: data,
+    name: '胸腺法新（粉针剂/1.6mg）',
+    mapData: Highcharts.maps['cn/china'],
+    joinBy: 'name' // 根据 name 属性进行关联
+  }]
+});
+</script>
+
+<script>
+	var chart = Highcharts.chart('container-medicine-distribution-link-price-increase', {
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: '药品流通环节加价'
+	},
+	xAxis: {
+		categories: ['肝必复软胶囊', '锌钙特口服液', '氟康唑', '头孢他啶', '胃舒宁胶囊']
+	},
+	yAxis: {
+		min: 0,
+		title: {
+			text: '价格'
+		},
+		stackLabels: {  // 堆叠数据标签
+			enabled: true,
+			style: {
+				fontWeight: 'bold',
+				color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+			}
+		}
+	},
+	legend: {
+		align: 'right',
+		x: -30,
+		verticalAlign: 'top',
+		y: 25,
+		floating: true,
+		backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+		borderColor: '#CCC',
+		borderWidth: 1,
+		shadow: false
+	},
+	tooltip: {
+		formatter: function () {
+			return '<b>' + this.x + '</b><br/>' +
+				this.series.name + ': ' + this.y + '<br/>' +
+				'总量: ' + this.point.stackTotal;
+		}
+	},
+	plotOptions: {
+		column: {
+			stacking: 'normal',
+			dataLabels: {
+				enabled: true,
+				color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+				style: {
+					// 如果不需要数据标签阴影，可以将 textOutline 设置为 'none'
+					textOutline: '1px 1px black'
+				}
+			}
+		}
+	},
+	series: [ {
+		name: '零售加价',
+		data: [34, 20, 68, 32.5, 36]
+	}, {
+		name: '经销加价',
+		data: [4, 2.5, 4, 8, 4.5]
+	},{
+		name: '出厂价',
+		data: [4, 2.5, 4, 7, 4.5]
+	}]
+});
+</script>
+
+<script>
+	var chart = Highcharts.chart('container-Guangdong-hospital-service-tendency-2015-2017', {
+	title: {
+		text: '2015 ~ 2017 年广东省公立医院服务量及次均费用情况'
+	},
+	subtitle: {
+		text: '数据来源：'
+	},
+	yAxis: {
+		title: {
+			text: '人次或费用'
+		}
+	},
+	legend: {
+		layout: 'vertical',
+		align: 'right',
+		verticalAlign: 'middle'
+	},
+	plotOptions: {
+		series: {
+			label: {
+				connectorAllowed: false
+			},
+			pointStart: 2015,
+			pointEnd:2017
+		}
+	},
+	series: [{
+		name: '门（急）诊人次/万人次',
+		data: [33341.91, 34667.27, 35003.47]
+	}, {
+		name: '出院人次/万人次',
+		data: [958.93, 1024.34, 1118.65]
+	}, {
+		name: '门( 急) 诊次均费用/元',
+		data: [202.01, 214.17, 230.72]
+	}, {
+		name: '住院次均费用/元',
+		data: [10352.26, 10790.59, 10895.41]
+	}],
+	responsive: {
+		rules: [{
+			condition: {
+				maxWidth: 500
+			},
+			chartOptions: {
+				legend: {
+					layout: 'horizontal',
+					align: 'center',
+					verticalAlign: 'bottom'
+				}
+			}
+		}]
+	}
+});
+</script>
+
+<script>
+	var chart = Highcharts.chart('container-Guangdong-public-hospital-medical-income-cost-structure', {
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: '2015 ~ 2017 年广东省公立医院医疗收入及医疗业务成本结构情况'
+	},
+	xAxis: {
+		categories: ['2015年', '2016年', '2017年']
+	},
+	yAxis: {
+		allowDecimals: false,
+		min: 0,
+		title: {
+			text: '占比'
+		}
+	},
+	tooltip: {
+		formatter: function () {
+			return '<b>' + this.x + '</b><br/>' +
+				this.series.name + ': ' + this.y + '<br/>';
+		}
+	},
+	plotOptions: {
+		column: {
+			stacking: 'normal'
+		}
+	},
+	series: [{
+		name: '药品收入',
+		data: [37.57, 36.75, 33.38],
+		stack: '收入' // stack 值相同的为同一组
+	}, {
+		name: '卫生材料收入',
+		data: [11.32, 11.95, 12.32],
+		stack: '收入'
+	}, {
+		name: '检查化验',
+		data: [25.70, 26.24, 26.79],
+		stack: '收入'
+	}, {
+		name: '技术性劳务收入',
+		data: [25.41, 25.06, 27.51],
+		stack: '收入'
+	},{
+		name: '药品费',
+		data: [36.91, 36.06, 33.87],
+		stack: '支出'
+	}, {
+		name: '卫生材料费',
+		data: [18.66, 19.07, 19.19],
+		stack: '支出'
+	}, {
+		name: '人员支出',
+		data: [33.60, 34.31, 36.40],
+		stack: '支出'
+	}, {
+		name: '其他支出',
+		data: [10.83, 10.56, 10.53],
+		stack: '支出'
+	}, {
+		type: 'spline',
+		name: '药品收入',
+		data: [37.57, 36.75, 33.38],
+		marker: {
+			lineWidth: 2,
+			lineColor: Highcharts.getOptions().colors[3],
+			fillColor: 'white'
+		}
+	}]
+});
+</script>
+
+<script>
+	var chart = Highcharts.chart('container-Guangdong-hospital-revenue-expenditure-growth',{
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: '2015 ~ 2017 年广东省公立医院收支增长及亏损情况'
+	},
+	xAxis: {
+		categories: ['2016年', '2017年']
+	},
+	series: [{
+		name: '收入总计同比增幅',
+		data: [17.46, 9.07]
+	}, {
+		name: '支出总计同比增幅',
+		data: [18.32, 9.29]
+	}, {
+		name: '盈余',
+		data: [-17.12, -3.68]
+	}, {
+		type: 'pie',
+		name: '医院数',
+		data: [ {
+			name: '亏损数',
+			y: 162,
+			color: Highcharts.getOptions().colors[1] // John's color
+		}, {
+			name: '其他',
+			y: 326,
+			color: Highcharts.getOptions().colors[0] // Joe's color
+		}],
+		center: [400, 20],
+		size: 80,
+		showInLegend: false,
+		dataLabels: {
+			enabled: false
+		}
+	}, {
+		type: 'pie',
+		name: '医院数',
+		data: [ {
+			name: '亏损数',
+			y: 184,
+			color: Highcharts.getOptions().colors[1] // John's color
+		}, {
+			name: '其他',
+			y: 304,
+			color: Highcharts.getOptions().colors[0] // Joe's color
+		}],
+		center: [1000, 20],
+		size: 80,
+		showInLegend: false,
+		dataLabels: {
+			enabled: false
+		}
 	}]
 });
 </script>

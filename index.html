@@ -7,17 +7,23 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="keywords" content="" />
 
-<script src="js/Highcharts-7.1.1/code/highcharts.js"></script>
 <script src="js/Highcharts-7.1.1/code/highcharts-more.js"></script>
-<script src="js/Highcharts-7.1.1/code/modules/exporting.js"></script>
 <script src="js/Highcharts-7.1.1/code/themes/grid-light.js"></script>
 <script src="js/Highcharts-7.1.1/code/modules/series-label.js"></script>
+
+<script src="js/Highcharts-7.1.1/code/highcharts.js"></script>
+<script src="js/Highcharts-7.1.1/code/modules/exporting.js"></script>
 <script src="js/Highcharts-7.1.1/code/modules/oldie.js"></script>
+<!--
 <script src="js/Highcharts-7.1.1/code/modules/timeline.js"></script>
+-->
 
 <script src="js/Highmaps-7.1.1/code/modules/map.js"></script>
 <script src="https://img.hcharts.cn/highmaps/highmaps.js"></script>
 <script src="https://data.jianshukeji.com/geochina/china.js"></script>
+
+<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/modules/timeline.js"></script>
 <!--
 <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
 <script src="https://code.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
@@ -177,22 +183,6 @@
 	<!-- services -->
 	<div class="services" id="background">
 		<div class="container">
-			<!--
-			<div class="agileits-heading">
-				<div class="col-md-4 text-center">
-					<h3>人数</h3>
-					<span class="num" data-num="1234567"></span>
-				</div>
-				<div class="col-md-4 text-center">
-					<h3>医院</h3>
-					<span class="num" data-num="1457"></span>
-				</div>
-				<div class="col-md-4 text-center">
-					<h3>药品</h3>
-					<span class="num" data-num="14554567"></span>
-				</div>
-			</div>
-			-->
 			<div class="agileits-heading">
 				<h3>背景</h3>
 			</div>
@@ -283,7 +273,7 @@
 				<div class="modal-body">
 					<div class="agileits-w3layouts-info">
 						<div class="col-md-12" id="container-rare-disease-incidence-drug-price-correlation" style="min-width:400px;height:400px"></div>
-						<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 15px;">药品的价格和该疾病的胡患病率也基本呈负相关性。以性粒细胞白血病为例，这种发病率为0.39~0.55/10万的疾病并不常见，在成年白血病病人中，只有约20%属于慢粒。这说明，就算一款面向重病的新药到达向市场推广的阶段，但如果这个急病的患病率低，需要购买这款药品的消费者少，市场格局就小。为了保证一定的利润空间，药企只能选择提升药品单价来达到总收益的平衡。
+						<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 15px;">药品的价格和该疾病的患病率也基本呈负相关性。以性粒细胞白血病为例，这种发病率为0.39~0.55/10万的疾病并不常见，在成年白血病病人中，只有约20%属于慢粒。这说明，就算一款面向重病的新药到达向市场推广的阶段，但如果这个急病的患病率低，需要购买这款药品的消费者少，市场格局就小。为了保证一定的利润空间，药企只能选择提升药品单价来达到总收益的平衡。
 						</p>
 						<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 15px;">所以并非所有高价药都应该遭受批判，由于凝结了智力成果，它们的定价遵循一定科学的规则，也遵循基本的逐利原则。如果对高价药一竹竿打死，就不存在对于新药研发的利润刺激，最终只会导致药物创新缺乏驱动力。
 						</p>
@@ -584,6 +574,120 @@
 		</div> 
 	</div> 
 	<!-- //events -->
+	<!--ddffgg-->
+	<div class="ag-content-customer-wrap">
+		<div class="ag-content-customer">
+			<div class="ag-content-customer-ele">
+				<div class="ag-content-customer-ele-shadow"></div>
+				<span>顶配</span>
+				<img src="images/顶配.png" data-hover="77" data-normal="85">
+			</div>
+			<div class="ag-content-customer-ele">
+				<div class="ag-content-customer-ele-shadow"></div>
+				<span>高配</span>
+				<img src="images/高配.png" style="left:65px;" data-hover="57" data-normal="65">
+			</div>
+			<div class="ag-content-customer-ele">
+				<div class="ag-content-customer-ele-shadow"></div>
+				<span>标配</span>
+				<img src="images/标配.png" style="left:96px;" data-hover="88" data-normal="96">
+			</div>
+			<div class="ag-content-customer-ele">
+				<div class="ag-content-customer-ele-shadow"></div>
+				<span>低配</span>
+				<img src="images/低配.png" style="left:83px;" data-hover="75" data-normal="83">
+			</div>
+			<div class="ag-content-customer-ele">
+				<div class="ag-content-customer-ele-shadow"></div>
+				<span>简配</span>
+				<img src="images/简配.png" style="left:56px;" data-hover="48" data-normal="56">
+			</div>
+			<div class="ag-content-customer-ele">
+				<div class="ag-content-customer-ele-shadow"></div>
+				<span>不考虑</span>
+				<img src="images/不考虑.png" style="left:83px;" data-hover="75" data-normal="83">
+			</div>
+			<div class="ag-content-customer-ele-detail">
+				<ul>
+					<li class="acced-li-1"></li>
+				</ul>
+				<div class="ag-content-customer-ele-detail-display">
+					<div class="ag-content-customer-ele-detail-display-left">
+						<img src="images/顶配.png">
+					</div>
+					<div class="ag-content-customer-ele-detail-display-right">
+						<span style="top:27px; left:0px; text-align:right;"><img src="images/man1.png"></span>
+						<span class="point" style="top:88px; right:158px;">&gt;</span>
+						<span style="top:235px; left:0px; text-align:right;"><img src="images/woman1.png"></span>
+						<span class="point" style="top:262px; right:158px;">&gt;</span>
+					</div>
+				</div>
+
+				<div class="ag-content-customer-ele-detail-display">
+					<div class="ag-content-customer-ele-detail-display-left">
+						<img src="images/高配.png">
+					</div>
+					<div class="ag-content-customer-ele-detail-display-right">
+						<span style="top:27px; left:0px; text-align:right;"><img src="images/man2.png"></span>
+						<span class="point" style="top:88px; right:158px;">&gt;</span>
+						<span style="top:235px; left:0px; text-align:right;"><img src="images/woman2.png"></span>
+						<span class="point" style="top:262px; right:158px;">&gt;</span>
+					</div>
+				</div>
+
+				<div class="ag-content-customer-ele-detail-display">
+					<div class="ag-content-customer-ele-detail-display-left">
+						<img src="images/标配.png">
+					</div>
+					<div class="ag-content-customer-ele-detail-display-right">
+						<span style="top:27px; left:0px; text-align:right;"><img src="images/man3.png"></span>
+						<span class="point" style="top:88px; right:158px;">&gt;</span>
+						<span style="top:235px; left:5px; text-align:right;"><img src="images/woman3.png"></span>
+						<span class="point" style="top:262px; right:158px;">&gt;</span>
+					</div>
+				</div>
+
+				<div class="ag-content-customer-ele-detail-display">
+					<div class="ag-content-customer-ele-detail-display-left">
+						<img src="images/低配.png">
+					</div>
+					<div class="ag-content-customer-ele-detail-display-right">
+						<span style="top:27px; left:0px; text-align:right;"><img src="images/man4.png"></span>
+						<span class="point" style="top:88px; right:158px;">&gt;</span>
+						<span style="top:235px; left:-5px; text-align:right;"><img src="images/woman4.png"></span>
+						<span class="point" style="top:262px; right:158px;">&gt;</span>
+					</div>
+				</div>
+
+				<div class="ag-content-customer-ele-detail-display">
+					<div class="ag-content-customer-ele-detail-display-left">
+						<img src="images/简配.png">
+					</div>
+					<div class="ag-content-customer-ele-detail-display-right">
+						<span style="top:27px; left:0px; text-align:right;"><img src="images/man5.png"></span>
+						<span class="point" style="top:88px; right:158px;">&gt;</span>
+						<span style="top:235px; left:0px; text-align:right;"><img src="images/woman5.png"></span>
+						<span class="point" style="top:262px; right:158px;">&gt;</span>
+					</div>
+				</div>
+
+				<div class="ag-content-customer-ele-detail-display">
+					<div class="ag-content-customer-ele-detail-display-left">
+						<img src="images/不考虑.png">
+					</div>
+					<div class="ag-content-customer-ele-detail-display-right">
+						<span style="top:27px; left:0px; text-align:right;"><img src="images/man6.png"></span>
+						<span class="point" style="top:88px; right:158px;">&gt;</span>
+						<span style="top:225px; left:0px; text-align:right;"><img src="images/woman6.png"></span>
+						<span class="point" style="top:262px; right:158px;">&gt;</span>
+					</div>
+				</div>
+
+				<div class="ag-content-customer-ele-detail-return"><span style="color:#FFF">&lt;</span>返回</div>
+			</div>
+		</div>
+	</div>
+	<!--sfffg-->
 	<div class="contact" id="mail">
 		<div class="container">
 			<div class="agileits-heading">
@@ -692,7 +796,8 @@
 	var chart = Highcharts.chart('container-2016-spend', {
 	chart: {
 		type: 'bubble',
-		zoomType: 'xy'
+		zoomType: 'xy',
+		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	title: {
 		text: '2016年卫生支出费用与实际花费金额'
@@ -951,7 +1056,7 @@ var data = [{"name":"北京","value":null},{"name":"天津","value":104.50},{"na
 // 初始化图表
 var map = new Highcharts.Map('map', {
   title: {
-    text: '药价地区差异显著'
+    text: '药价地区差异显著',
   },
   colorAxis: {
     min: 0,
@@ -1232,10 +1337,11 @@ var map = new Highcharts.Map('map', {
 <script>
 	var chart = Highcharts.chart('container-percentage-of-decline', {
 	chart: {
-		type: 'column'
+		type: 'column',
+		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	title: {
-		text: '纳入医保降价导致停产或断货的药物（代表）价格降幅'
+		text: '医保目录断供（典型）药物'
 	},
 	xAxis: {
 		categories: ['一克装头孢曲松', '赫赛汀', '卡托普利', '罗氏公司产头孢曲松']
@@ -1271,7 +1377,8 @@ var map = new Highcharts.Map('map', {
 <script>
 	Highcharts.chart('container-process', {
 	chart: {
-		type: 'timeline'
+		type: 'timeline',
+		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	xAxis: {
 		visible: false
@@ -1330,7 +1437,8 @@ var map = new Highcharts.Map('map', {
 <script>
 	var chart = Highcharts.chart('container-hospital-consultation',{
 	chart: {
-		type: 'column'
+		type: 'column',
+		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	title: {
 		text: '国内部分公立大型医院诊金'
@@ -1443,4 +1551,167 @@ var map = new Highcharts.Map('map', {
 		}
 	}]
 });
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".ag-content-customer-ele").bind("mouseenter mouseleave", function(e) {
+			var w = $(this).width();
+			var h = $(this).height();
+			var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
+			var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
+			var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+			if (e.type == 'mouseenter') {
+			// 0:up - 1:right - 2:down - 3:left
+			if (direction == 0) {
+				$(this).find('div').css({
+					'top': '-470px',
+					'left': '0px'
+				});
+				$(this).find('div').animate({
+					'top': 0
+				}, {
+					queue: false,
+					duration: 300
+				});
+			} else if (direction == 2) {
+				$(this).find('div').css({
+					'top': '470px',
+					'left': '0px'
+				});
+				$(this).find('div').animate({
+					'top': 0
+				}, {
+					queue: false,
+					duration: 300
+				});
+			} else if (direction == 1) {
+				$(this).find('div').css({
+					'top': '0px',
+					'left': '167px'
+				});
+				$(this).find('div').animate({
+					'left': 0
+				}, {
+					queue: false,
+					duration: 300
+				});
+			} else if (direction == 3) {
+				$(this).find('div').css({
+					'top': '0px',
+					'left': '-167px'
+				});
+				$(this).find('div').animate({
+					'left': 0
+				}, {
+					queue: false,
+					duration: 300
+				});
+			}
+			$(this).find('span').css('color', '#fff');
+			$(this).find('img').animate({
+				'left': $(this).find('img').attr('data-hover')
+			}, {
+				queue: false,
+				duration: 200
+			});
+		} else {
+			if (direction == 0) {
+				$(this).find('div').animate({
+					'top': -470
+				}, {
+					queue: false,
+					duration: 300
+				});
+			} else if (direction == 2) {
+				$(this).find('div').animate({
+					'top': 470
+				}, {
+					queue: false,
+					duration: 300
+				});
+			} else if (direction == 1) {
+				$(this).find('div').animate({
+					'left': 167
+				}, {
+					queue: false,
+					duration: 300
+				});
+			} else if (direction == 3) {
+				$(this).find('div').animate({
+					'left': -167
+				}, {
+					queue: false,
+					duration: 300
+				});
+			}
+			$(this).find('span').css('color', '#262626');
+			$(this).find('img').animate({
+				'left': $(this).find('img').attr('data-normal')
+			}, {
+				queue: false,
+				duration: 200
+			});
+		}
+	});
+		$(".ag-content-customer-ele").bind('click', function(e) {
+			var navIndex = $(e.target).parent().index();
+			$('.ag-content-customer-ele-detail ul li').removeClass('current');
+			$('.ag-content-customer-ele-detail ul li').eq(navIndex).addClass('current');
+			$('.ag-content-customer-wrap').css('background-color', '#469acb');
+			$('.ag-content-customer-ele').animate({
+				'width': 0
+			}, 500);
+			$('.ag-content-customer-ele-detail').animate({
+				'width': 1002
+			}, {
+				duration: 500,
+				complete: function() {
+					$('.ag-content-customer-ele-detail ul li').eq(navIndex).click();
+				}
+			});
+		});
+		$('.ag-content-customer-ele-detail-return').bind('click', function(e) {
+			$('.ag-content-customer-wrap').css('background-color', '#f1f1f1');
+			$('.ag-content-customer-ele-detail').css('overflow', 'hidden');
+			$('.ag-content-customer-ele').animate({
+				'width': 167
+			}, 500);
+			$('.ag-content-customer-ele-detail').animate({
+				'width': 0
+			}, 500);
+			$('.ag-content-customer-ele-detail-display').hide();
+		});
+		$('.ag-content-customer-ele-detail ul li').bind('click', function() {
+			$('.ag-content-customer-ele-detail ul li').removeClass('current');
+			$(this).addClass('current');
+			$('.ag-content-customer-ele-detail').css('overflow', 'visible');
+			var disIndex = $(this).index();
+			$('.ag-content-customer-ele-detail-display').hide();
+			$('.ag-content-customer-ele-detail-display').eq(disIndex).show();
+			// IE
+			if ("ActiveXObject" in window) {
+				$('.ag-content-customer-ele-detail-display-left').css({
+					'left': '0px',
+					'opacity': '1'
+				});
+				$('.ag-content-customer-ele-detail-display-right').css({
+					'right': '-120px',
+					'opacity': '1'
+				});
+				$('.ag-content-customer-ele-detail-display-left').eq(disIndex).animate({
+					'left': 120
+				}, {
+					duration: 1000,
+					easing: 'easeOutQuint'
+				});
+				$('.ag-content-customer-ele-detail-display-right').eq(disIndex).animate({
+					'right': 0
+				}, {
+					duration: 1000,
+					easing: 'easeOutQuint'
+				});
+			}
+		});
+	});
 </script>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>药神</title>
@@ -71,7 +71,29 @@
     	height: 47px; 
 		font-size: 30px;
 		font-family: "Times New Roman";
+	},
+	.self-container{
+		width: 900px;
+		height: 600px;
+		border: 1px solid #000;
+		margin: 50px auto;
+		overflow: hidden;
+		border-radius: 5px;
 	}
+	.self-container .self-picture{
+		cursor: pointer;
+		transition: all 0.5s; /* 所有的属性变化在0.5s的时间段内完成 */
+	}
+	.self-container .self-picture:hover{
+	transform: scale(1.05); /* 鼠标放到图片上的时候图片按比例放大1.2倍   */
+	background-color: #2d5ff5;
+	filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8; /*呈现半透明显示80%效果*/
+	/*
+	filter 设置平台IE半透明效果样式，值1-100，值越小越透明，设置IE8以前的透明使用
+	opacity 设置IE半透明效果样式，值0.1-1，值越小越透明，设置IE8以后版本的透明使用
+	-moz-opacity 对非IE浏览器设置，比如火狐，语法与IE相同
+	 */
+	}  
 </style>
 
 <!--[if lt IE 9]>
@@ -335,7 +357,7 @@
 			
 			<div class="filtr-container w3layouts agileits">
 				<div class="filtr-item w3layouts agileits" data-category="1" data-sort="orz">
-					<div class="col-md-6" align="center"><img src="images/谈判流程.png" alt="" style=""/></div>
+					<div class="col-md-6" align="center"><img src="images/谈判流程.png" alt="" style="min-width: 200px;min-height: 200px;"/></div>
 					<div class="col-md-6 text-center" style="text-indent: 2em; padding: 20px;">
 						<p style="text-align:justify; font-size: 16px;">中国政府在医疗卫生方面大刀阔斧地进行着改革，出台的其中一项非常重要的政策，就是“药价谈判”。那么何谓药价谈判呢？
 						</p>
@@ -449,6 +471,62 @@
 				<div class="col-md-4 service-box">
 					<div class="col-md-12" id="container-percentage-of-decline" style="min-width:400px;height:400px"></div>
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">而被纳入医保目录的药企也面临着同样的情况。政府扩大医保目录的本质是和药企协商，压低价格，指定医院向该药企以相应的价格采购药品。然而这个“采购价”往往偏低，让许多药企失去了生产的动力，直接停产该药品。因此，虽然医保目录正在逐年扩大，但我们依然要正视由于政府议价过低而倒逼药企停产药品的问题。</p>
+				</div>
+				<div class="col-md-8 self-container" >
+					<a id="example-1" href="javascript:void(0);" onclick="example_1();">
+						<img src="images/图片19.png" class="self-picture col-md-3" style="bottom: 30px;" id="example-1-img">
+					</a>
+					<div class="col-md-3" id="example-1-b" style="display: none;"></div>
+					<div style="text-align:justify;vertical-align:middle;font-size: 16px; padding: 20px;display: none;" class="col-md-6" id="example-1-p">
+						<span>零售价格：1.8元</span></br>
+						<span>容量： 100片/瓶，5mg/片</span></br>
+						<span>类型：抗甲状腺药物，治疗甲亢</span></br>
+						<span>重要性：较其替代药物，性价比最高，副作用最小，风险最低</span></br>
+						<span>断供原因：药价定价过于便宜，原料药价格一直上涨，利润空间不断压缩，药企无利可图，最终停产。</span></br>
+						<span>断供的悲剧：他巴唑，国产廉价救命药。断供后病患只能用高价买进口的相同药品，售价33元（每盒50片，每片10毫克），后被黄牛炒至高价，每盒100元以上。病患所购药品价格上升超百倍。</span></br>
+						<a id="example-return-1" href="javascript:void(0);" onclick="example_return_1();"><span style="color:#2d5ff5">&lt;</span>返回</a>
+					</div>
+					<a id="example-2" href="javascript:void(0);" onclick="example_2();">
+						<img src="images/图片20.png" class="self-picture col-md-3" style="bottom: 30px;" id="example-2-img">
+					</a>
+					<div class="col-md-3" id="example-2-b" style="display: none;"></div>
+					<div style="text-align:justify;vertical-align:middle;font-size: 16px; padding: 20px;display: none;" class="col-md-6" id="example-2-p">
+						<span>零售价格：1.8元</span></br>
+						<span>容量： 100片/瓶，5mg/片</span></br>
+						<span>类型：抗甲状腺药物，治疗甲亢</span></br>
+						<span>重要性：较其替代药物，性价比最高，副作用最小，风险最低</span></br>
+						<span>断供原因：药价定价过于便宜，原料药价格一直上涨，利润空间不断压缩，药企无利可图，最终停产。</span></br>
+						<span>断供的悲剧：他巴唑，国产廉价救命药。断供后病患只能用高价买进口的相同药品，售价33元（每盒50片，每片10毫克），后被黄牛炒至高价，每盒100元以上。病患所购药品价格上升超百倍。</span></br>
+						<a id="example-return-2" href="javascript:void(0);" onclick="example_return_2();"><span style="color:#2d5ff5">&lt;</span>返回</a>
+					</div>
+					<a id="example-3" href="javascript:void(0);" onclick="example_3();">
+						<img src="images/图片21.png" class="self-picture col-md-3" style="bottom: 30px;" id="example-3-img">
+					</a>
+					<div class="col-md-3" id="example-3-b" style="display: none;"></div>
+					<div style="text-align:justify;vertical-align:middle;font-size: 16px; padding: 20px;display: none;" class="col-md-6" id="example-3-p">
+						<span>零售价格：1.8元</span></br>
+						<span>容量： 100片/瓶，5mg/片</span></br>
+						<span>类型：抗甲状腺药物，治疗甲亢</span></br>
+						<span>重要性：较其替代药物，性价比最高，副作用最小，风险最低</span></br>
+						<span>断供原因：药价定价过于便宜，原料药价格一直上涨，利润空间不断压缩，药企无利可图，最终停产。</span></br>
+						<span>断供的悲剧：他巴唑，国产廉价救命药。断供后病患只能用高价买进口的相同药品，售价33元（每盒50片，每片10毫克），后被黄牛炒至高价，每盒100元以上。病患所购药品价格上升超百倍。</span></br>
+						<a id="example-return-3" href="javascript:void(0);" onclick="example_return_3();"><span style="color:#2d5ff5">&lt;</span>返回</a>
+					</div>
+					<a id="example-4" href="javascript:void(0);" onclick="example_4();">
+						<img src="images/图片22.png" class="self-picture col-md-3" style="bottom: 30px;" id="example-4-img">
+					</a>
+					<div class="col-md-3" id="example-4-b" style="display: none;"></div>
+					<div style="text-align:justify;vertical-align:middle;font-size: 16px; padding: 20px;display: none;" class="col-md-6" id="example-4-p">
+						<span>零售价格：1.8元</span></br>
+						<span>容量： 100片/瓶，5mg/片</span></br>
+						<span>类型：抗甲状腺药物，治疗甲亢</span></br>
+						<span>重要性：较其替代药物，性价比最高，副作用最小，风险最低</span></br>
+						<span>断供原因：药价定价过于便宜，原料药价格一直上涨，利润空间不断压缩，药企无利可图，最终停产。</span></br>
+						<span>断供的悲剧：他巴唑，国产廉价救命药。断供后病患只能用高价买进口的相同药品，售价33元（每盒50片，每片10毫克），后被黄牛炒至高价，每盒100元以上。病患所购药品价格上升超百倍。</span></br>
+						<a id="example-return-4" href="javascript:void(0);" onclick="example_return_4();"><span style="color:#2d5ff5">&lt;</span>返回</a>
+					</div>
+				</div>
+				<div class="col-md-4 service-box">
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">很显然，在医改的大背景下，为了替人民群众谋求更大的福利，政府确实有在不断努力，频频出手打压高价药——“4+7”政策、带量采购、药价谈判等政策就是最好的证明。但与此同时，这些政策把部分砝码转移到了药企之上，也误伤了不少低价的救命药，甚至导致许多药企不堪压价之重而选择退出市场。因此，每一颗在价格上关照着病患的药丸，都凝结着政府的努力以及药企做出巨大让步的决心。</p>
 				</div>
 				<div class="clearfix"> </div>
@@ -574,50 +652,40 @@
 	</div> 
 	<!-- //events -->
 	<!--ddffgg-->
+	<!--
 	<div class="ag-content-customer-wrap">
 		<div class="ag-content-customer">
 			<div class="ag-content-customer-ele">
 				<div class="ag-content-customer-ele-shadow"></div>
-				<span>顶配</span>
-				<img src="images/顶配.png" data-hover="77" data-normal="85">
+				<span>案例1</span>
+				<img src="images/图片19.png" data-hover="77" data-normal="85">
 			</div>
 			<div class="ag-content-customer-ele">
 				<div class="ag-content-customer-ele-shadow"></div>
-				<span>高配</span>
-				<img src="images/高配.png" style="left:65px;" data-hover="57" data-normal="65">
+				<span>案例2</span>
+				<img src="images/图片20.png" style="left:65px;" data-hover="57" data-normal="65">
 			</div>
 			<div class="ag-content-customer-ele">
 				<div class="ag-content-customer-ele-shadow"></div>
-				<span>标配</span>
-				<img src="images/标配.png" style="left:96px;" data-hover="88" data-normal="96">
+				<span>案例3</span>
+				<img src="images/图片21.png" style="left:96px;" data-hover="88" data-normal="96">
 			</div>
 			<div class="ag-content-customer-ele">
 				<div class="ag-content-customer-ele-shadow"></div>
-				<span>低配</span>
-				<img src="images/低配.png" style="left:83px;" data-hover="75" data-normal="83">
+				<span>案例4</span>
+				<img src="images/图片22.png" style="left:83px;" data-hover="75" data-normal="83">
 			</div>
-			<div class="ag-content-customer-ele">
-				<div class="ag-content-customer-ele-shadow"></div>
-				<span>简配</span>
-				<img src="images/简配.png" style="left:56px;" data-hover="48" data-normal="56">
-			</div>
-			<div class="ag-content-customer-ele">
-				<div class="ag-content-customer-ele-shadow"></div>
-				<span>不考虑</span>
-				<img src="images/不考虑.png" style="left:83px;" data-hover="75" data-normal="83">
-			</div>
+
 			<div class="ag-content-customer-ele-detail">
 				<ul style="display:none;">
 					<li class="acced-li-1"></li>
 					<li class="acced-li-2"></li>
 					<li class="acced-li-3"></li>
 					<li class="acced-li-4"></li>
-					<li class="acced-li-5"></li>
-					<li class="acced-li-6"></li>
 				</ul>
 				<div class="ag-content-customer-ele-detail-display">
 					<div class="ag-content-customer-ele-detail-display-left">
-						<img src="images/顶配.png">
+						<img src="images/图片19.png">
 					</div>
 					<div class="ag-content-customer-ele-detail-display-right">
 						<span style="top:27px; left:0px; text-align:right;"><img src="images/man1.png"></span>
@@ -627,7 +695,7 @@
 
 				<div class="ag-content-customer-ele-detail-display">
 					<div class="ag-content-customer-ele-detail-display-left">
-						<img src="images/高配.png">
+						<img src="images/图片20.png">
 					</div>
 					<div class="ag-content-customer-ele-detail-display-right">
 						<span style="top:27px; left:0px; text-align:right;">
@@ -639,7 +707,7 @@
 
 				<div class="ag-content-customer-ele-detail-display">
 					<div class="ag-content-customer-ele-detail-display-left">
-						<img src="images/标配.png">
+						<img src="images/图片21.png">
 					</div>
 					<div class="ag-content-customer-ele-detail-display-right">
 						<span style="top:27px; left:0px; text-align:right;"><img src="images/man3.png"></span>
@@ -651,7 +719,7 @@
 
 				<div class="ag-content-customer-ele-detail-display">
 					<div class="ag-content-customer-ele-detail-display-left">
-						<img src="images/低配.png">
+						<img src="images/图片22.png">
 					</div>
 					<div class="ag-content-customer-ele-detail-display-right">
 						<span style="top:27px; left:0px; text-align:right;"><img src="images/man4.png"></span>
@@ -661,34 +729,11 @@
 					</div>
 				</div>
 
-				<div class="ag-content-customer-ele-detail-display">
-					<div class="ag-content-customer-ele-detail-display-left">
-						<img src="images/简配.png">
-					</div>
-					<div class="ag-content-customer-ele-detail-display-right">
-						<span style="top:27px; left:0px; text-align:right;"><img src="images/man5.png"></span>
-						<span class="point" style="top:88px; right:158px;">&gt;</span>
-						<span style="top:235px; left:0px; text-align:right;"><img src="images/woman5.png"></span>
-						<span class="point" style="top:262px; right:158px;">&gt;</span>
-					</div>
-				</div>
-
-				<div class="ag-content-customer-ele-detail-display">
-					<div class="ag-content-customer-ele-detail-display-left">
-						<img src="images/不考虑.png">
-					</div>
-					<div class="ag-content-customer-ele-detail-display-right">
-						<span style="top:27px; left:0px; text-align:right;"><img src="images/man6.png"></span>
-						<span class="point" style="top:88px; right:158px;">&gt;</span>
-						<span style="top:225px; left:0px; text-align:right;"><img src="images/woman6.png"></span>
-						<span class="point" style="top:262px; right:158px;">&gt;</span>
-					</div>
-				</div>
-
 				<div class="ag-content-customer-ele-detail-return"><span style="color:#FFF">&lt;</span>返回</div>
 			</div>
 		</div>
 	</div>
+	-->
 	<!--sfffg-->
 	<!--
 	<div class="contact" id="mail">
@@ -794,6 +839,85 @@
 	function hideParagraph1(){
 		$("#paragraph1").hide(100);
 		$("#paragraph2").show(1000);
+	}
+</script>
+<script type="text/javascript">
+	function example_1(){
+		$("#example-2-img").hide(90);
+		$("#example-3-img").hide(90);
+		$("#example-4-img").hide(90);
+		$("#example-1-b").show(90);
+		$("#example-1-p").show(90);
+	}
+</script>
+
+<script type="text/javascript">
+	function example_return_1(){
+		$("#example-2-img").show(90);
+		$("#example-3-img").show(90);
+		$("#example-4-img").show(90);
+		$("#example-1-b").hide(90);
+		$("#example-1-p").hide(90);
+	}
+</script>
+
+<script type="text/javascript">
+	function example_2(){
+		$("#example-1-img").hide(90);
+		$("#example-3-img").hide(90);
+		$("#example-4-img").hide(90);
+		$("#example-2-b").show(90);
+		$("#example-2-p").show(90);
+	}
+</script>
+
+<script type="text/javascript">
+	function example_return_2(){
+		$("#example-1-img").show(90);
+		$("#example-3-img").show(90);
+		$("#example-4-img").show(90);
+		$("#example-2-b").hide(90);
+		$("#example-2-p").hide(90);
+	}
+</script>
+
+<script type="text/javascript">
+	function example_3(){
+		$("#example-2-img").hide(90);
+		$("#example-1-img").hide(90);
+		$("#example-4-img").hide(90);
+		$("#example-3-b").show(90);
+		$("#example-3-p").show(90);
+	}
+</script>
+
+<script type="text/javascript">
+	function example_return_3(){
+		$("#example-2-img").show(90);
+		$("#example-1-img").show(90);
+		$("#example-4-img").show(90);
+		$("#example-3-b").hide(90);
+		$("#example-3-p").hide(90);
+	}
+</script>
+
+<script type="text/javascript">
+	function example_4(){
+		$("#example-2-img").hide(90);
+		$("#example-3-img").hide(90);
+		$("#example-1-img").hide(90);
+		$("#example-4-b").show(90);
+		$("#example-4-p").show(90);
+	}
+</script>
+
+<script type="text/javascript">
+	function example_return_4(){
+		$("#example-2-img").show(90);
+		$("#example-3-img").show(90);
+		$("#example-1-img").show(90);
+		$("#example-4-b").hide(90);
+		$("#example-4-p").hide(90);
 	}
 </script>
 <script>

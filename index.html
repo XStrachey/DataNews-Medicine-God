@@ -85,8 +85,8 @@
 		transition: all 0.5s; /* 所有的属性变化在0.5s的时间段内完成 */
 	}
 	.self-container .self-picture:hover{
-	transform: scale(1.05); /* 鼠标放到图片上的时候图片按比例放大1.2倍   */
-	background-color: #2d5ff5;
+	transform: scale(1.15); /* 鼠标放到图片上的时候图片按比例放大1.2倍   */
+	/*background-color: #2d5ff5;*/
 	filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8; /*呈现半透明显示80%效果*/
 	/*
 	filter 设置平台IE半透明效果样式，值1-100，值越小越透明，设置IE8以前的透明使用
@@ -202,7 +202,7 @@
 	</div>
 	<!-- //banner -->
 	<!-- services -->
-	<div class="services" id="background">
+	<div class="welcome" id="background">
 		<div class="container">
 			<div class="agileits-heading">
 				<h3>药神在哪？</h3>
@@ -230,7 +230,7 @@
 	</div>
 	<!-- //services -->
 	<!-- welcome -->
-	<div class="welcome" id="section-1">
+	<div class="services" id="section-1">
 		<div class="container">
 			<div class="agileits-heading">
 				<h3>十年十亿美金</h3> 
@@ -304,7 +304,7 @@
 		</div>
 	</div>
 	<!-- services -->
-	<div class="services" id="section-2">
+	<div class="welcome" id="section-2">
 		<div class="container">
 			<div class="agileits-heading">
 				<h3>药价或成失控过山车</h3> 
@@ -326,6 +326,7 @@
 					<h5>“4+7”以外——阳光照进的阴影</h5>
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">让人欣慰的是，2018年11月15日，政府正式出手打击虚高的药价，发布了《4+7城市药品集中采购文件》。“4+7”城市（北京、天津、上海、重庆、沈阳、大连、厦门、广州、深圳、成都、西安共11个城市）被列指定为药品集中采购试点，由政府出面压低药价，进行药价谈判，进行带量采购。2018年，这些试点的药价同比平均降幅52%，最高降幅甚至达到96%。</p>
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">但是阳光照进的地方，也让阴影更加刺眼。如果“4+7”城市的药企在降幅高达96%的而情况下依然有利可图，那么可想，这当中的部分药企——其定价之乱，暴利之高令人咂舌。</p>
+					<div id="container-4-7-distinction" style="min-width:400px;height:400px"></div>
 				</div>
 				<div class="col-md-4 service-box">
 					<!--<figure class="icon">
@@ -341,7 +342,7 @@
 	</div>
 	<!-- //services -->
 	<!-- portfolio -->
-	<div class="portfolio" id="section-3">
+	<div class="services" id="section-3">
 		<div class="container">
 			<div class="agileits-heading">
 				<h3>医改风雨兼程，成效显著</h3> 
@@ -415,13 +416,15 @@
 	</div>-->
 	<!-- //team -->
 	<!-- events -->
-	<div class="services" id="section-4"> 
+	<div class="welcome" id="section-4"> 
 		<div class="container">
 			<div class="agileits-heading">
 				<h3>医改一直在路上</h3>
 			</div>
 			<div class="agileinfo-about-info">
-				<div id="container-process"></div>
+				<div id="container-process" class="col-md-12"></div>
+				<div id="container-timeline" class="col-md-12"></div>
+				<!---->
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">经过医疗政策的不断调整，政府在医改中已经取得了巨大的成效。最显著的变化就在于，民众的医保覆盖面扩大了。与此同时，民众的医保标准不降反升。中国政府的改革巨轮行驶在历史的蓝海上，每一个沉重的步伐背后都有掀起层层浪花。
 				</p>
 			</div>
@@ -435,7 +438,7 @@
 				<h3 style="padding: 20px;">谁是医改的承重墙？</h3>
 			</div>
 			<div class="container">
-				<div class="col-md-12" id="container-2016-spend" style="min-width:200px;height:400px"></div>
+				<div class="col-md-12" id="container-2017-spend" style="min-width:200px;height:400px"></div>
 				<div class="col-md-4 history-grid">
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px; color:#f8f8ff">确实，回望中国从2003年至今，能够用这么短的时间获得如此巨大的成效，在世界上堪称奇迹。但是更神奇的地方在于，作为世界第二大经济体，2016年中国的总GDP达到了12.2万亿美元，而医疗卫生支出仅有0.76万亿，占总GDP的6.23%。</p>
 					<div class="clearfix"></div>
@@ -484,7 +487,7 @@
 						<span>重要性：较其替代药物，性价比最高，副作用最小，风险最低</span></br>
 						<span>断供原因：药价定价过于便宜，原料药价格一直上涨，利润空间不断压缩，药企无利可图，最终停产。</span></br>
 						<span>断供的悲剧：他巴唑，国产廉价救命药。断供后病患只能用高价买进口的相同药品，售价33元（每盒50片，每片10毫克），后被黄牛炒至高价，每盒100元以上。病患所购药品价格上升超百倍。</span></br>
-						<a id="example-return-1" href="javascript:void(0);" onclick="example_return_1();"><span style="color:#2d5ff5">&lt;</span>返回</a>
+						<a id="example-return-1" href="javascript:void(0);" onclick="example_return_1();"><span style="color:#2d5ff5"></span>[返回]</a>
 					</div>
 					<a id="example-2" href="javascript:void(0);" onclick="example_2();">
 						<img src="images/图片20.png" class="self-picture col-md-3" style="bottom: 30px;" id="example-2-img">
@@ -497,7 +500,7 @@
 						<span>重要性：较其替代药物，性价比最高，副作用最小，风险最低</span></br>
 						<span>断供原因：药价定价过于便宜，原料药价格一直上涨，利润空间不断压缩，药企无利可图，最终停产。</span></br>
 						<span>断供的悲剧：他巴唑，国产廉价救命药。断供后病患只能用高价买进口的相同药品，售价33元（每盒50片，每片10毫克），后被黄牛炒至高价，每盒100元以上。病患所购药品价格上升超百倍。</span></br>
-						<a id="example-return-2" href="javascript:void(0);" onclick="example_return_2();"><span style="color:#2d5ff5">&lt;</span>返回</a>
+						<a id="example-return-2" href="javascript:void(0);" onclick="example_return_2();"><span style="color:#2d5ff5"></span>[返回]</a>
 					</div>
 					<a id="example-3" href="javascript:void(0);" onclick="example_3();">
 						<img src="images/图片21.png" class="self-picture col-md-3" style="bottom: 30px;" id="example-3-img">
@@ -510,7 +513,7 @@
 						<span>重要性：较其替代药物，性价比最高，副作用最小，风险最低</span></br>
 						<span>断供原因：药价定价过于便宜，原料药价格一直上涨，利润空间不断压缩，药企无利可图，最终停产。</span></br>
 						<span>断供的悲剧：他巴唑，国产廉价救命药。断供后病患只能用高价买进口的相同药品，售价33元（每盒50片，每片10毫克），后被黄牛炒至高价，每盒100元以上。病患所购药品价格上升超百倍。</span></br>
-						<a id="example-return-3" href="javascript:void(0);" onclick="example_return_3();"><span style="color:#2d5ff5">&lt;</span>返回</a>
+						<a id="example-return-3" href="javascript:void(0);" onclick="example_return_3();"><span style="color:#2d5ff5"></span>[返回]</a>
 					</div>
 					<a id="example-4" href="javascript:void(0);" onclick="example_4();">
 						<img src="images/图片22.png" class="self-picture col-md-3" style="bottom: 30px;" id="example-4-img">
@@ -523,7 +526,7 @@
 						<span>重要性：较其替代药物，性价比最高，副作用最小，风险最低</span></br>
 						<span>断供原因：药价定价过于便宜，原料药价格一直上涨，利润空间不断压缩，药企无利可图，最终停产。</span></br>
 						<span>断供的悲剧：他巴唑，国产廉价救命药。断供后病患只能用高价买进口的相同药品，售价33元（每盒50片，每片10毫克），后被黄牛炒至高价，每盒100元以上。病患所购药品价格上升超百倍。</span></br>
-						<a id="example-return-4" href="javascript:void(0);" onclick="example_return_4();"><span style="color:#2d5ff5">&lt;</span>返回</a>
+						<a id="example-return-4" href="javascript:void(0);" onclick="example_return_4();"><span style="color:#2d5ff5"></span>[返回]</a>
 					</div>
 				</div>
 				<div class="col-md-4 service-box">
@@ -642,7 +645,6 @@
 				<h3>众生普渡背后——看不见的“药神”</h3>
 			</div>
 			<div class="agileinfo-about-info">
-				<div id="container-process"></div>
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">《我不是药神》电影已经落下帷幕，曾经热议的话题也已经缓缓降温。但是被媒体渲染的药价问题，民众被煽动的焦虑，就像是放在医疗改革上面的定时炸弹，随时都会被再次引爆。药价乱象或时有发生，但是正如药品流通的市场逻辑不是“做慈善”，药价乱象的平息不可能一蹴而就。而政府为了让民众用得上“平价药”也在不断努力，加大调控力度。因此，如果一味给医改施加压力而罔顾实际情况，最终只是不断地给政府、药企、医院上紧发条，医改的承压阀将会彻底崩解；毕竟，过犹不及的悲剧我们已经看过太多。
 				</p>
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">医改一直在路上，除了看到医改普惠不到的地区和方面外，也许我们都应该把感激的目光放在医改达到的成效上——要看到那些为促成医改而在利润上做出让步的部分药企；更要看到在医改的背景下，负重前行的一众医护人员。普渡众生背后，能够拯救中国民众医疗问题的，不是一个突然杀出来的“药神英雄”。如果一定要授以药神之称，那么这个荣耀一你该当属于为之而做出牺牲的所有人。毕竟，每一次伟大的改革背后，都总有一批人要光荣地承受时代的阵痛。但是如何减缓这批人承受痛苦的重量，需要政府在政策上作出更加科学的考量。
@@ -789,6 +791,12 @@
 			imgSrc: "images/图片4.png",
 			imgWidth: 1366,
 			imgHeight: 768
+		}),
+		$('.jarallax-new-3').jarallax({
+			speed: 0.5,
+			imgSrc: "images/图片12.png",
+			imgWidth: 1366,
+			imgHeight: 768
 		})
 	</script>
 	<script src="js/responsiveslides.min.js"></script>
@@ -921,37 +929,57 @@
 	}
 </script>
 <script>
-	var chart = Highcharts.chart('container-2016-spend', {
+	var chart = Highcharts.chart('container-2017-spend', {
 	chart: {
 		type: 'bubble',
 		zoomType: 'xy',
 		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	title: {
-		text: '2016年卫生支出费用与实际花费金额'
+		text: '2017年卫生支出费用与实际花费金额',
+		style: {
+			color: '#fefdf5'
+		}
+	},
+	subtitle: {
+		text: '<div style="text-align: center;">数据来源：各地区官方数据统计局 </br>注：由于目前网上流通的年鉴并没有更新到2017年，因此我们运用本组的语言优势，进入各个地区的官方数据统计局搜集最新数据并且验证已知数据的真伪。</br>由于数据来源由网站以及在网站下载的pdf表格构成，在此不一一呈现。</div>',
+		useHTML: true
+	},
+	xAxis: {
+		title: {
+			text: '医疗支出重',
+			style: {
+				color: '#fefdf5'
+			}
+		}
+	},
+	yAxis: {
+		title: {
+			text: '医疗支出占GDP的比重',
+			style: {
+				color: '#fefdf5'
+			}
+		}
 	},
 	series: [{
 		name:'中国',
 		// 每个气泡包含三个值，x，y，z；其中 x，y用于定位，z 用于计算气泡大小
-		data: [[6, 21, 11.19]]
+		data: [[14451, 203085, 7.12]]
 	},{
 		name:'美国',
-		data: [[16, 31, 16.62]]
+		data: [[73980, 302028, 16.62]]
 	},{
 		name:'香港',
-		data: [[5, 21, 0.32]]
+		data: [[492, 4068, 12.09]]
 	},{
 		name:'日本',
-		data: [[10, 22, 4.95]]
+		data: [[9094, 60978, 14.91]]
 	},{
-		name:'加拿大',
-		data: [[10, 28, 1.54]]
-	},{
-		name:'英国',
-		data: [[9, 19, 2.65]]
+		name:'韩国',
+		data: [[3392, 23765, 14.27]]
 	},{
 		name:'德国',
-		data: [[11, 20, 3.48]]
+		data: [[28531, 103902,27.46]]
 	}]
 });
 </script>
@@ -1062,7 +1090,8 @@ Highcharts.chart('container-expenditure-ratio', {
 <script>
 	var chart = Highcharts.chart('container-2009-2017-medical-insurance-catalog',{
 	chart: {
-		type: 'column'
+		type: 'column',
+		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	title: {
 		text: '医保目录扩大'
@@ -1203,7 +1232,8 @@ var map = new Highcharts.Map('map', {
 <script>
 	var chart = Highcharts.chart('container-medicine-distribution-link-price-increase', {
 	chart: {
-		type: 'column'
+		type: 'column',
+		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	title: {
 		text: '药品流通环节加价'
@@ -1525,12 +1555,13 @@ var map = new Highcharts.Map('map', {
 		text: '数据来源：<a href="https://en.wikipedia.org/wiki/Timeline_of_space_exploration">www.wikipedia.org</a>'
 	},
 	colors: [
-		'#4185F3',
-		'#427CDD',
-		'#406AB2',
-		'#3E5A8E',
-		'#3B4A68',
-		'#363C46'
+		'#e5e4fb',
+		'#cacaf6',
+		'#aeb1f1',
+		'#8f98ec',
+		'#6e80e7',
+		'#4169e1',
+		'#5e7ef9'
 	],
 	series: [{
 		data: [{
@@ -1846,4 +1877,107 @@ var map = new Highcharts.Map('map', {
 			}
 		});
 	});
+</script>
+
+<script>
+	Highcharts.chart('container-timeline', {
+	chart: {
+		type: 'timeline',
+		backgroundColor: 'rgba(0,0,0,0)'
+	},
+	xAxis: {
+		visible: false
+	},
+	yAxis: {
+		visible: false
+	},
+	title: {
+		text: ''
+	},
+	colors: [
+		'#5577f1',
+		'#4b70e9',
+		'#4169e1',
+		'#3662d9',
+		'#295cd1',
+		'#1955c9',
+		'#334690'
+	],
+	series: [{
+		data: [{
+			name: '扶持中医药和民族医药',
+			label: '2012：完善基本药物制度',
+			description: '居民医保和新农合补助提高到240元'
+		}, {
+			name: '设立重大特大疾病保障和救助机制',
+			label: '2013: 加快公立医院改革',
+			description: '开展儿童白血病等20种重大疾病保障试点工作'
+		}, {
+			name: '健全分级诊疗体系',
+			label: '2014：推行居民大病保险',
+			description: '首次提及规范药品流通秩序'
+		}, {
+			name: '加强全科医生制度建设',
+			label: '2015：破除以药补医',
+			description: '药审改革加快审批速度、优化新药结构'
+		}, {
+			name: '两票制',
+			label: '2017: 协调医保支付方式改革',
+			description: '全部取消药品加成'
+		}, {
+			name: '新版基本药物目录发布',
+			label: '2018:新版GSP发布',
+			description: '国家带量采购.'
+		}]
+	}]
+});
+</script>
+
+<script type="text/javascript">
+	var chart = Highcharts.chart('container-4-7-distinction',{
+	chart: {
+		type: 'area',
+		inverted: true, // x y轴对调
+		backgroundColor: 'rgba(0,0,0,0)'
+	},
+	title: {
+		text: '“4+7”城市内药价前后差异对比图'
+	},
+	legend: {
+		layout: 'vertical',
+		align: 'right',
+		verticalAlign: 'top',
+		x: 0,
+		y: 50,
+		floating: true,
+		borderWidth: 1,
+		backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+	},
+	xAxis: {
+		categories: [
+			'阿托伐他汀口服常释剂型','瑞舒伐他汀口服常释剂型','恩替卡韦口服常释剂型','福辛普利口服常释剂型','厄贝沙坦氢氯噻嗪口服常释剂型','替诺福韦二吡呋酯口服常释剂型','蒙脱石口服常释剂型'
+		],
+		style:{
+			"fontSize": "6px"
+		}
+	},
+	yAxis: {
+		title: {
+			text: '单价/元'
+		},
+		min: 0
+	},
+	plotOptions: {
+		area: {
+			fillOpacity: 0.5
+		}
+	},
+	series: [{
+		name: '全国最低中标价',
+		data: [5.64, 3.06, 10.55, 2.70, 4.18, 14.17, 1.05]
+	}, {
+		name: '单片报价',
+		data: [0.94, 0.78, 0.62, 0.84, 1.40, 0.72, 0.9]
+	}]
+});
 </script>

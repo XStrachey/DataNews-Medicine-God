@@ -7,13 +7,13 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="keywords" content="" />
 
-<script src="js/Highcharts-7.1.1/code/highcharts-more.js"></script>
 <script src="js/Highcharts-7.1.1/code/themes/grid-light.js"></script>
 <script src="js/Highcharts-7.1.1/code/modules/series-label.js"></script>
 
 <script src="js/Highcharts-7.1.1/code/highcharts.js"></script>
 <script src="js/Highcharts-7.1.1/code/modules/exporting.js"></script>
 <script src="js/Highcharts-7.1.1/code/modules/oldie.js"></script>
+<script src="js/Highcharts-7.1.1/code/modules/bullet.js"></script>
 <!--
 <script src="js/Highcharts-7.1.1/code/modules/timeline.js"></script>
 -->
@@ -24,6 +24,7 @@
 
 <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
 <script src="https://code.highcharts.com.cn/highcharts/modules/timeline.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts/highcharts-more.js"></script>
 
 <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
 <script src="js/jquery.scrollme.min.js"></script>
@@ -69,6 +70,22 @@
 	});
 </script> 
 
+<style type="text/css">
+#container1 {
+	max-width: 800px;
+	height: 115px;
+	margin: 1em auto;
+}
+#container2, #container3 {
+	max-width: 800px;
+	height: 85px;
+	margin: 1em auto;
+}
+.hc-cat-title {
+	font-size: 13px;
+	font-weight: bold;
+}
+</style>
 <style type="text/css">
 	.num{
 		width: 33px; 
@@ -245,7 +262,7 @@
 			<div class="agileinfo-about-info wow zoomIn">
 				<p style="font-size: 22px;"><b>大家呵壁问天：“拯救我们的人在哪？能够让我们吃上平价药的药神在哪？！”</b></p>
 			</div>
-			<div class="agileinfo-about-info wow bounceInUp" data-wow-delay="1s">
+			<div class="agileinfo-about-info wow bounceInUp" data-wow-delay="1.5s">
 				<p style="font-size: 26px; color: #2d5ff5"><b>却鲜少人意识到，其实中国的“药神”早就在默默庇护我们多年。</b></p>
 			</div>
 		</div>
@@ -297,6 +314,7 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">这是医药圈著名的“双十定律”，代表一款新药研发成功平均耗时成本和经济成本。</br>一款药品如果要真正在市场中流通，从研发阶段到开发阶段最后到完全审核通过，往往要超过十年。从平均耗资3-6亿的研究阶段，再到平均5-11亿的开发阶段，企业投入的科研成本不断累加升高，十年研发的总投入高达十亿美元以上。然而，药企不但要投入巨大的时间成本和科研成本还要面临研发审核的挑战——企业研发投入虽大，但新品研发成功率不到2%。因此，在20年的专利保护期内，企业需要通过高定价来收回前期投入。一旦专利保护期一过，国内就可以研发相似药效的仿制药，价格却要比原创药低廉得多。
 				</p>
 				<h4 style="">市场具有局限性</h4>
+				<div class="col-md-12" id="container-rare-disease-incidence-drug-price-correlation" style="min-width:200px;height:400px;max-height: 600px;max-width: 1400px;"></div>
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">药品的价格和该疾病的患病率也基本呈负相关性。以I级肺动脉高压为例，这种发病率为1/10万的疾病并不常见，属于罕见病的一种。相对的，治疗甲型血友病的马昔腾坦片药价也相对偏高，接近三万元人民币一盒。这说明，就算一款新药通过了严格的重重审核可以推出市场，但如果这种疾病的发病率低，需要购买这款药品的消费者少，市场格局就小。为了保证一定的利润空间，药企只能选择提升药品单价来达到总收益的平衡。
 				</p>
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">所以并非所有高价药都应该遭受批判，由于凝结了智力成果，它们的定价遵循一定科学的规则，也遵循基本的逐利原则。如果对高价药一竹竿打死，就不存在对于新药研发的利润刺激，最终只会导致药物创新缺乏驱动力。
@@ -308,27 +326,35 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 	<!-- //welcome -->
 	
 	<!-- services -->
-	<div class="welcome wow zoomIn" id="section-2">
+	<div class="welcome" id="section-2">
 		<div class="container">
-			<div class="agileits-heading">
+			<div class="agileits-heading wow zoomIn">
 				<h3>药价或成失控过山车</h3> 
 			</div>
 			<div class="specialty-grids-top">
-				<div class="col-md-12 service-box" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				<div class="col-md-12 service-box wow zoomIn" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">虽然众多科研投入巨大的高价药不该成为众矢之的，但不可否认的是，在当今的中国，确实有药品定价虚高的情况发生。作为一个药品市场兴衰几十年的见证者，佛山某三甲医院的院长告诉记者：“现在的很多药企指定药价是按照市场的逐利逻辑来的，没有一个客观的标准，所以可高可低，定价很不靠谱。”</p>
+				</div>
+				<div class="col-md-12 service-box wow zoomIn" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<h4>药价乱象依然屡禁不止</h4>
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">原来，药品从生产到终端销售一般要经过6-7个环节，经由制药企业、药品批发企业、代理机构等，加之进货渠道与运行体制的不同，药品价格参差不齐，难以统一。层层加码至药店，药价被抬到了一定高度。
 					</p>
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">可以看到，诸如“胃舒宁胶囊”，“锌钙特口服液”等我们耳熟能详的常备药品，从出厂价到经销商，再到药房，其中价格层层递增，从经销商到药房上升了足足4倍。单纯的市场逐利逻辑而非科学的定价标准，让药价变化无度如坐过山车。
 					</p>
+				</div>
+				<div class="col-md-12 service-box wow zoomIn" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<h4>“4+7”以外——阳光照进的阴影</h4>
+					<div id="container-4-7-distinction" style="min-width:200px;height:400px;max-height: 600px;max-width: 1400px;"></div>
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">让人欣慰的是，2018年11月15日，政府正式出手打击虚高的药价，发布了《4+7城市药品集中采购文件》。“4+7”城市（北京、天津、上海、重庆、沈阳、大连、厦门、广州、深圳、成都、西安共11个城市）被列指定为药品集中采购试点，由政府出面压低药价，进行药价谈判，进行带量采购。
 					</p>
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">同年，这些试点的药价同比平均降幅52%，最高降幅甚至达到96%。以释放剂型的药物为例，在原有的中标价上，它们居然还可以开出一个远远低于中标价的价格给医院，来换取巨大的采购量。
 					</p>
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">但是阳光照进的地方，也让阴影更加刺眼。反过来想，如果“4+7”城市的药企在降幅高达96%的情况下依然有利可图，那么可想，这当中的部分药企——其定价之乱，暴利之高令人咂舌。
 					</p>
+				</div>
+				<div class="col-md-12 service-box wow zoomIn" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<h4>“穷”与“富”的两极分化</h4>
+					<div class="col-md-12" id="map" style=""></div>
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">更重要的是，“4+7”的十一个城市有幸成为医改新政的试点，那么其他城市呢？至少在短期内，它们依然要承受缺乏政府干预的药价乱象。可以看到，越是陕甘宁、云贵川等人均可支配收入较低的省市，其药品相对价格就越高——有的甚至超过了富裕的东部沿海发达城市。 “4+7”在沿海城市试点不断向内陆城市扩展的过程里，地区之间在药价上面的巨大差异依然需要得到我们的警惕和重视。
 					</p>
 				</div>
@@ -369,14 +395,13 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 				<!---->
 				<div class="clearfix"></div>
 				<div class="filtr-item wow zoomIn" data-category="2" data-sort="omg">
-					<div class="col-md-12" id="container-2009-2017-medical-insurance-catalog" style="min-width:200px;height:400px;max-height: 600px;max-width: 1400px;"></div>
+					<div class="col-md-12" id="container-2009-2017-medical-insurance-catalog" style="min-width: 200px; max-width: 600px; height: 400px; margin: 0 auto;max-height: 600px;max-width: 1400px;"></div>
 					<div class="col-md-12 text-center" style="text-indent: 2em; padding: 15px;">
 						<p style="text-align:justify; font-size: 16px;">而政府此前，为了让医保覆盖到更多病种，还实行了扩大医保目录的政策，其采用的主要手段也是药价谈判。
 						</p>
 						<p style="text-align:justify; font-size: 16px;">从医保目录清单看来，被纳入2017版的药品在甲乙类的中成药和西成药两方面都比2009版有较大的上升幅度，每一类清单的种类基本上升超百个。这意味着，民众所患疾病，有越来越多的病种能够享受到医疗保障，这无疑让许多重病家庭卸下了很大一部分经济负担。
 						</p>
 					</div>
-					
 				</div>
 				<div class="clearfix"></div>
 				<div class="filtr-item wow zoomIn" data-category="3" data-sort="omg">
@@ -407,7 +432,7 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 			</div>
 			<div class="agileinfo-about-info">
 				<!--<div id="container-process" class="col-md-12"></div>-->
-				
+				<div class="col-md-12" id="container-2017-spend" style="min-width:200px;height:400px;max-height: 600px;max-width: 1400px;"></div>
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">回望中国从上世纪九十年代年到2016年，其HAQ指数从49.5上升到78，世界排名更是从110位跃升到48位。能够用这么短的时间获得如此巨大的成效，在世界上堪称奇迹。但是更神奇的地方在于，作为世界第二大经济体，2016年中国的总GDP达到了12.2万亿美元，而医疗卫生支出仅有0.76万亿，占总GDP的6.23%。
 				</p>
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">而作为第一大经济体的美国（16%），其医疗卫生支出占比是中国的2.5倍；而第三大经济体的日本（11%），其医疗卫生支出占比也是中国的1.7倍。
@@ -426,7 +451,9 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 				<h3 style="padding: 20px;">逃离医改的药企</h3>
 			</div>
 			<div class="container">
-				<div class="col-md-12" id="container-2017-spend" style="min-width:200px;height:400px"></div>
+				<div id="container1"></div>
+				<div id="container2"></div>
+				<div id="container3"></div>
 				<div class="col-md-12">
 					<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px; color:#f8f8ff">2018年12月7日，那一天是中国药市“闪崩”的一天：证券市场数据显示，当日A股市场多达20只股票跌幅超过5%，到了2018年末，与5月最高时相比，医药生物全行业下半年抹去近4000亿市值，近乎“腰斩”。
 					</p>
@@ -469,22 +496,31 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 	<!--/tab_section-->
 
 	<!-- welcome -->
-	<div class="services wow zoomIn" id="section-7">
+	<div class="services" id="section-7">
 		<div class="container">
-			<div class="agileits-heading">
+			<div class="agileits-heading wow zoomIn">
 				<h3>医院的生存困境</h3> 
 			</div>
-			<div class="agileinfo-about-info">
+			<div id="container-2015-income" style="min-width:200px;height:400px" class="col-md-12 wow bounceInLeft"></div>
+			<div id="container-2016-income" style="min-width:200px;height:400px" class="col-md-12 wow bounceInRight"></div>
+			<div id="container-2017-income" style="min-width:200px;height:400px" class="col-md-12 wow bounceInLeft"></div>
+			<div class="agileinfo-about-info wow zoomIn">
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px; color:#0c0f02">为了贯彻医改政策，不但药企要面临利润倒缩的问题，部分医院也陷入了经济的困境。院长透露：“为了贯彻医改政策，我们这个医院已经出现了运营困难的情况，某些环节甚至还在亏损阶段。” 
 				</p>
+			</div>
+			<div id="container-Guangdong-hospital-revenue-expenditure-growth" style="min-width:200px;height:400px" class="col-md-12"></div>
+			<div class="agileinfo-about-info wow zoomIn">
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px; color:#0c0f02">中国的公立医院，一般被定义为公益性事业单位。所以中国公立医院的很大一部分收入来源本可以依靠当地政府的财政补贴来达到收支平衡。然而情况远没有那么简单，院长告诉数据小组记者，“财政六项补贴经常不到位，单项补贴的量更是不到位。”财政补贴来源不足，这不是单单佛山一所三甲医院面临的问题，也是很多公立医院存在的普遍问题。2015 －2017 年，全广东省公立医院超出30%亏损，亏损数量不断增加，且亏损额逐年上升。
 				</p>
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px; color:#0c0f02">更重要的是，医改新政取消了药品加成，这等于将医院在药品方面的15%的利润全数砍去，对于那些本来在药品上就很小盈利空间的医院无疑是雪上加霜。对比起1998年公立医院的药品收入占比，2017年的药品收入占比下降了15.8%。据院长透露，由于取消了药品加成，其中的10%要医院自行消化，实际上医院结余的部分并没有上升，甚至有的医院在倒缩。
 				</p>
 			</div>
 			
-			<div class="agileinfo-about-info">
+			<div class="agileinfo-about-info wow zoomIn">
 				<h4>医护人员或成“廉价劳动力”</h4>
+			</div>
+			<div id="container-hospital-consultation" style="min-width:200px;height:400px;max-height: 600px;max-width: 1400px;" class="col-md-12 wow bounceInLeft"></div>
+			<div class="agileinfo-about-info wow zoomIn">
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">医院利润空间不断收缩，医院何以为继？院长给予数据小组记者的答案是：“医院的大多数收入来源于劳务性收入，其中占比很大的一部分来源于诊金。为了能够保持医院的收益平衡，医护人员只能尽量多地接诊患者。”
 				</p>
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">据悉，除了经济发达的一线城市北上深，其他城市大型公立医院的普通门诊诊金基本维持在较低的水平。以12元的诊金为例，到底要接待多少病患才能够支撑医院的日常开支呢？
@@ -493,6 +529,10 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 				</p>
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">这些数字到底意味着什么呢？按照中国的官方标准——中国的卫生部规定：专科医生一小时接诊6个病人，一个上午4个小时，那就是24个病人。按照美国的标准，这样的工作量更是不可想象的。美国的医生一天只能接待8个病人，多出来接待的病人，医疗保险公司是不会支付的。所以按照美国的标准，一个医生最理想的接诊病人一天八个。因此，中国医生的工作量是官方规定的3-4倍，是美国标准的8-10倍。
 				</p>
+			</div>
+			<div class="col-md-6 wow bounceInLeft" id="container-2002-graduate" style="min-width:200px;height:400px;max-height: 600px;max-width: 1400px;"></div>
+			<div class="col-md-6 wow bounceInRight" id="container-2017-graduate" style="min-width:200px;height:400px;max-height: 600px;max-width: 1400px;"></div>
+			<div class="agileinfo-about-info wow zoomIn">
 				<p style="text-align:justify; text-indent: 2em; font-size: 16px; padding: 20px;">在劳务收费标准过于低廉的情况下，医院只有提升医务人员的单位工作量，才能达到总收益的稳定。即使在今年诊金有所上升的情况下，医务人员普遍压力太大已成有目共睹的事实。‘中国公立医院医务人员的工资水平较这个职业需要具备的专业能力而言，就像是“廉价劳动力”’，院长补充道。
 				</p>
 			</div>
@@ -711,7 +751,7 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 	title: {
 		text: '2017年卫生支出费用与实际花费金额',
 		style: {
-			color: '#fefdf5'
+			color: '#0a052a'
 		}
 	},
 	subtitle: {
@@ -722,7 +762,7 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 		title: {
 			text: '医疗卫生投入',
 			style: {
-				color: '#fefdf5'
+				color: '#0a052a'
 			}
 		}
 	},
@@ -730,7 +770,7 @@ translatex, translatey & translatez：指定的距离把动画元素沿X、Y和Z
 		title: {
 			text: '总财政支出',
 			style: {
-				color: '#fefdf5'
+				color: '#0a052a'
 			}
 		}
 	},
@@ -856,54 +896,6 @@ Highcharts.chart('container-expenditure-ratio', {
 	}, {
 		name: '2016年',
 		data: [6, 16, 9, 11, 10, 10]
-	}]
-});
-</script>
-
-<script>
-	var chart = Highcharts.chart('container-2009-2017-medical-insurance-catalog',{
-	chart: {
-		type: 'column',
-		backgroundColor: 'rgba(0,0,0,0)'
-	},
-	title: {
-		text: '医保目录扩大'
-	},
-	subtitle: {
-		text: '数据来源: '
-	},
-	xAxis: {
-		categories: [
-			'甲类西成药','甲类中成药','乙类西成药','乙类中成药'
-		],
-		crosshair: true
-	},
-	yAxis: {
-		min: 0,
-		title: {
-			text: '药品目录'
-		}
-	},
-	tooltip: {
-		// head + 每个 point + footer 拼接成完整的 table
-		headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-		pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-		'<td style="padding:0"><b>{point.y:.0f} 种</b></td></tr>',
-		footerFormat: '</table>',
-		shared: true,
-		useHTML: true
-	},
-	plotOptions: {
-		column: {
-			borderWidth: 0
-		}
-	},
-	series: [{
-		name: '2009版',
-		data: [349, 154, 791, 886]
-	}, {
-		name: '2017版',
-		data: [402, 192, 886, 1046]
 	}]
 });
 </script>
@@ -1059,12 +1051,24 @@ var map = new Highcharts.Map('map', {
 		}
 	},
 	series: [ {
+		animation: {
+			duration: 10000,
+			easing: 'easeOutBounce'
+		},
 		name: '零售加价',
 		data: [34, 20, 68, 32.5, 36]
 	}, {
+		animation: {
+			duration: 3000,
+			easing: 'easeOutBounce'
+		},
 		name: '经销加价',
 		data: [4, 2.5, 4, 8, 4.5]
 	},{
+		animation: {
+			duration: 2000,
+			easing: 'easeOutBounce'
+		},
 		name: '出厂价',
 		data: [4, 2.5, 4, 7, 4.5]
 	}]
@@ -1205,7 +1209,8 @@ var map = new Highcharts.Map('map', {
 <script>
 	var chart = Highcharts.chart('container-Guangdong-hospital-revenue-expenditure-growth',{
 	chart: {
-		type: 'column'
+		type: 'column',
+		backgroundColor:'rgba(0,0,0,0)'
 	},
 	title: {
 		text: '2015 ~ 2017 年广东省公立医院收支增长及亏损情况'
@@ -1225,42 +1230,6 @@ var map = new Highcharts.Map('map', {
 	}, {
 		name: '盈余',
 		data: [-17.12, -3.68]
-	}, {
-		type: 'pie',
-		name: '医院数',
-		data: [ {
-			name: '亏损数',
-			y: 162,
-			color: Highcharts.getOptions().colors[1] // John's color
-		}, {
-			name: '其他',
-			y: 326,
-			color: Highcharts.getOptions().colors[0] // Joe's color
-		}],
-		center: [224, 20],
-		size: 60,
-		showInLegend: false,
-		dataLabels: {
-			enabled: false
-		}
-	}, {
-		type: 'pie',
-		name: '医院数',
-		data: [ {
-			name: '亏损数',
-			y: 184,
-			color: Highcharts.getOptions().colors[1] // John's color
-		}, {
-			name: '其他',
-			y: 304,
-			color: Highcharts.getOptions().colors[0] // Joe's color
-		}],
-		center: [224, 120],
-		size: 60,
-		showInLegend: false,
-		dataLabels: {
-			enabled: false
-		}
 	}]
 });
 </script>
@@ -1409,6 +1378,10 @@ var map = new Highcharts.Map('map', {
 		}
 	},
 	series: [{
+		animation: {
+			duration: 10000,
+			easing: 'easeOutBounce'
+		},
 		name: '医院普通诊查费',
 		data: [42,26,17,12, 12, 12, 11, 10, 10, 10, 6, 6]
 	}]
@@ -1416,9 +1389,10 @@ var map = new Highcharts.Map('map', {
 </script>
 
 <script>
-	var chart = Highcharts.chart('container-rare-disease-incidence-drug-price-correlation', {
+	var chartRDIDPC = Highcharts.chart('container-rare-disease-incidence-drug-price-correlation', {
 	chart: {
-		zoomType: 'xy'
+		zoomType: 'xy',
+		backgroundColor: 'rgba(0,0,0,0)'
 	},
 	title: {
 		text: '罕见病发病率和药品价格相关关系'
@@ -1473,6 +1447,10 @@ var map = new Highcharts.Map('map', {
 	series: [{
 		name: '发病率',
 		type: 'column',
+		animation: {
+			duration: 10000,
+			easing: 'easeOutBounce'
+		},
 		yAxis: 1,
 		data: [0.001,0.001, 0.002,0.005, 0.01, 0.02 ],
 		tooltip: {
@@ -1480,6 +1458,10 @@ var map = new Highcharts.Map('map', {
 		}
 	}, {
 		name: '药品价格',
+		animation: {
+			duration: 10000,
+			easing: 'easeOutBounce'
+		},
 		type: 'spline',
 		data: [29980,12000, 9800, 10777.4, 8815, 6369 ],
 		tooltip: {
@@ -1487,169 +1469,6 @@ var map = new Highcharts.Map('map', {
 		}
 	}]
 });
-</script>
-
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(".ag-content-customer-ele").bind("mouseenter mouseleave", function(e) {
-			var w = $(this).width();
-			var h = $(this).height();
-			var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
-			var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
-			var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
-			if (e.type == 'mouseenter') {
-			// 0:up - 1:right - 2:down - 3:left
-			if (direction == 0) {
-				$(this).find('div').css({
-					'top': '-470px',
-					'left': '0px'
-				});
-				$(this).find('div').animate({
-					'top': 0
-				}, {
-					queue: false,
-					duration: 300
-				});
-			} else if (direction == 2) {
-				$(this).find('div').css({
-					'top': '470px',
-					'left': '0px'
-				});
-				$(this).find('div').animate({
-					'top': 0
-				}, {
-					queue: false,
-					duration: 300
-				});
-			} else if (direction == 1) {
-				$(this).find('div').css({
-					'top': '0px',
-					'left': '167px'
-				});
-				$(this).find('div').animate({
-					'left': 0
-				}, {
-					queue: false,
-					duration: 300
-				});
-			} else if (direction == 3) {
-				$(this).find('div').css({
-					'top': '0px',
-					'left': '-167px'
-				});
-				$(this).find('div').animate({
-					'left': 0
-				}, {
-					queue: false,
-					duration: 300
-				});
-			}
-			$(this).find('span').css('color', '#fff');
-			$(this).find('img').animate({
-				'left': $(this).find('img').attr('data-hover')
-			}, {
-				queue: false,
-				duration: 200
-			});
-		} else {
-			if (direction == 0) {
-				$(this).find('div').animate({
-					'top': -470
-				}, {
-					queue: false,
-					duration: 300
-				});
-			} else if (direction == 2) {
-				$(this).find('div').animate({
-					'top': 470
-				}, {
-					queue: false,
-					duration: 300
-				});
-			} else if (direction == 1) {
-				$(this).find('div').animate({
-					'left': 167
-				}, {
-					queue: false,
-					duration: 300
-				});
-			} else if (direction == 3) {
-				$(this).find('div').animate({
-					'left': -167
-				}, {
-					queue: false,
-					duration: 300
-				});
-			}
-			$(this).find('span').css('color', '#262626');
-			$(this).find('img').animate({
-				'left': $(this).find('img').attr('data-normal')
-			}, {
-				queue: false,
-				duration: 200
-			});
-		}
-	});
-		$(".ag-content-customer-ele").bind('click', function(e) {
-			var navIndex = $(e.target).parent().index();
-			$('.ag-content-customer-ele-detail ul li').removeClass('current');
-			$('.ag-content-customer-ele-detail ul li').eq(navIndex).addClass('current');
-			$('.ag-content-customer-wrap').css('background-color', '#469acb');
-			$('.ag-content-customer-ele').animate({
-				'width': 0
-			}, 500);
-			$('.ag-content-customer-ele-detail').animate({
-				'width': 1002
-			}, {
-				duration: 500,
-				complete: function() {
-					$('.ag-content-customer-ele-detail ul li').eq(navIndex).click();
-				}
-			});
-		});
-		$('.ag-content-customer-ele-detail-return').bind('click', function(e) {
-			$('.ag-content-customer-wrap').css('background-color', '#f1f1f1');
-			$('.ag-content-customer-ele-detail').css('overflow', 'hidden');
-			$('.ag-content-customer-ele').animate({
-				'width': 167
-			}, 500);
-			$('.ag-content-customer-ele-detail').animate({
-				'width': 0
-			}, 500);
-			$('.ag-content-customer-ele-detail-display').hide();
-		});
-		$('.ag-content-customer-ele-detail ul li').bind('click', function() {
-			$('.ag-content-customer-ele-detail ul li').removeClass('current');
-			$(this).addClass('current');
-			$('.ag-content-customer-ele-detail').css('overflow', 'visible');
-			var disIndex = $(this).index();
-			$('.ag-content-customer-ele-detail-display').hide();
-			$('.ag-content-customer-ele-detail-display').eq(disIndex).show();
-			// IE
-			if ("ActiveXObject" in window) {
-				$('.ag-content-customer-ele-detail-display-left').css({
-					'left': '0px',
-					'opacity': '1'
-				});
-				$('.ag-content-customer-ele-detail-display-right').css({
-					'right': '-120px',
-					'opacity': '1'
-				});
-				$('.ag-content-customer-ele-detail-display-left').eq(disIndex).animate({
-					'left': 120
-				}, {
-					duration: 1000,
-					easing: 'easeOutQuint'
-				});
-				$('.ag-content-customer-ele-detail-display-right').eq(disIndex).animate({
-					'right': 0
-				}, {
-					duration: 1000,
-					easing: 'easeOutQuint'
-				});
-			}
-		});
-	});
 </script>
 
 <script>
@@ -1752,5 +1571,562 @@ var map = new Highcharts.Map('map', {
 		name: '单片报价',
 		data: [0.94, 0.78, 0.62, 0.84, 1.40, 0.72, 0.9]
 	}]
+});
+</script>
+
+<script>
+	var chart1 = Highcharts.chart('container-2017-graduate', {
+	chart: {
+		spacing : [40, 0 , 40, 0],
+		backgroundColor:'rgba(0,0,0,0)'
+	},
+	title: {
+		floating:true,
+		text: '2017年执业医师学历构成'
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			point: {
+				events: {
+					mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+						// 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+						chart1.setTitle({
+							text: e.target.name+ '\t'+ e.target.y + ' %'
+						});
+					}
+					//, 
+					// click: function(e) { // 同样的可以在点击事件里处理
+					//     chart.setTitle({
+					//         text: e.point.name+ '\t'+ e.point.y + ' %'
+					//     });
+					// }
+				}
+			},
+		}
+	},
+	series: [{
+		type: 'pie',
+		innerSize: '80%',
+		name: '该学历人数占比',
+		data: [
+			{name:'高中及以下',   y: 1.4, url : 'http://bbs.hcharts.cn'},
+			{
+				name: '研究生及以上',
+				y: 14,
+				sliced: true,
+				selected: true,
+				url: 'http://www.hcharts.cn'
+			},
+			['大学本科',    46.2],
+			['大专',    25.8],
+			['中专',  12.6]
+		]
+	}]
+}, function(c) { // 图表初始化完毕后的会掉函数
+	// 环形图圆心
+	var centerY = c.series[0].center[1],
+		titleHeight = parseInt(c.title.styles.fontSize);
+	// 动态设置标题位置
+	c.setTitle({
+		y:centerY + titleHeight/2
+	});
+});
+</script>
+
+<script>
+	var chart2 = Highcharts.chart('container-2002-graduate', {
+	chart: {
+		spacing : [40, 0 , 40, 0],
+		backgroundColor: 'rgba(0,0,0,0)'
+	},
+	title: {
+		floating:true,
+		text: '2002年执业医师学历构成'
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			point: {
+				events: {
+					mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+						// 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+						chart2.setTitle({
+							text: e.target.name+ '\t'+ e.target.y + ' %'
+						});
+					}
+					//, 
+					// click: function(e) { // 同样的可以在点击事件里处理
+					//     chart.setTitle({
+					//         text: e.point.name+ '\t'+ e.point.y + ' %'
+					//     });
+					// }
+				}
+			},
+		}
+	},
+	series: [{
+		type: 'pie',
+		innerSize: '80%',
+		name: '该学历人数占比',
+		data: [
+			{name:'高中及以下',   y: 6.4, url : 'http://bbs.hcharts.cn'},
+			{
+				name: '研究生及以上',
+				y: 2.8,
+				sliced: true,
+				selected: true,
+				url: 'http://www.hcharts.cn'
+			},
+			['大学本科',   30.7],
+			['大专',    31.8],
+			['中专', 28.3]
+		]
+	}]
+}, function(c) { // 图表初始化完毕后的会掉函数
+	// 环形图圆心
+	var centerY = c.series[0].center[1],
+		titleHeight = parseInt(c.title.styles.fontSize);
+	// 动态设置标题位置
+	c.setTitle({
+		y:centerY + titleHeight/2
+	});
+});
+</script>
+
+<script>
+	var chart3 = Highcharts.chart('container-2015-income', {
+	chart: {
+		spacing : [40, 0 , 40, 0],
+		backgroundColor:'rgba(0,0,0,0)'
+	},
+	title: {
+		floating:true,
+		text: '2015年广东省公立医院医疗收入结构'
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			point: {
+				events: {
+					mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+						// 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+						chart3.setTitle({
+							text: e.target.name+ '\t'+ e.target.y + ' %'
+						});
+					}
+					//, 
+					// click: function(e) { // 同样的可以在点击事件里处理
+					//     chart.setTitle({
+					//         text: e.point.name+ '\t'+ e.point.y + ' %'
+					//     });
+					// }
+				}
+			},
+		}
+	},
+	series: [{
+		type: 'pie',
+		innerSize: '80%',
+		name: '收入占比',
+		data: [
+			{name:'技术性劳务收入',   y:25.4, url : 'http://bbs.hcharts.cn'},
+			['检查化验',      25.7],
+			{
+				name: '药品收入',
+				y:37.6,
+				sliced: true,
+				selected: true,
+				url: 'http://www.hcharts.cn'
+			},
+			['卫生材料收入',  11.3]
+		]
+	}]
+}, function(c) { // 图表初始化完毕后的会掉函数
+	// 环形图圆心
+	var centerY = c.series[0].center[1],
+		titleHeight = parseInt(c.title.styles.fontSize);
+	// 动态设置标题位置
+	c.setTitle({
+		y:centerY + titleHeight/2
+	});
+});
+</script>
+
+<script>
+	var chart4 = Highcharts.chart('container-2016-income', {
+	chart: {
+		spacing : [40, 0 , 40, 0],
+		backgroundColor:'rgba(0,0,0,0)'
+	},
+	title: {
+		floating:true,
+		text: '2016年广东省公立医院医疗收入结构'
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			point: {
+				events: {
+					mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+						// 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+						chart4.setTitle({
+							text: e.target.name+ '\t'+ e.target.y + ' %'
+						});
+					}
+					//, 
+					// click: function(e) { // 同样的可以在点击事件里处理
+					//     chart.setTitle({
+					//         text: e.point.name+ '\t'+ e.point.y + ' %'
+					//     });
+					// }
+				}
+			},
+		}
+	},
+	series: [{
+		type: 'pie',
+		innerSize: '80%',
+		name: '收入占比',
+		data: [
+			{name:'技术性劳务收入',   y:25.0, url : 'http://bbs.hcharts.cn'},
+			['检查化验',      26.2],
+			{
+				name: '药品收入',
+				y:36.8,
+				sliced: true,
+				selected: true,
+				url: 'http://www.hcharts.cn'
+			},
+			['卫生材料收入',  12.0]
+		]
+	}]
+}, function(c) { // 图表初始化完毕后的会掉函数
+	// 环形图圆心
+	var centerY = c.series[0].center[1],
+		titleHeight = parseInt(c.title.styles.fontSize);
+	// 动态设置标题位置
+	c.setTitle({
+		y:centerY + titleHeight/2
+	});
+});
+</script>
+
+<script>
+	var chart5 = Highcharts.chart('container-2017-income', {
+	chart: {
+		spacing : [40, 0 , 40, 0],
+		backgroundColor:'rgba(0,0,0,0)'
+	},
+	title: {
+		floating:true,
+		text: '2017年广东省公立医院医疗收入结构'
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			},
+			point: {
+				events: {
+					mouseOver: function(e) {  // 鼠标滑过时动态更新标题
+						// 标题更新函数，API 地址：https://api.hcharts.cn/highcharts#Chart.setTitle
+						chart5.setTitle({
+							text: e.target.name+ '\t'+ e.target.y + ' %'
+						});
+					}
+					//, 
+					// click: function(e) { // 同样的可以在点击事件里处理
+					//     chart.setTitle({
+					//         text: e.point.name+ '\t'+ e.point.y + ' %'
+					//     });
+					// }
+				}
+			},
+		}
+	},
+	series: [{
+		type: 'pie',
+		innerSize: '80%',
+		name: '收入占比',
+		data: [
+			{name:'技术性劳务收入',   y:27.5, url : 'http://bbs.hcharts.cn'},
+			['检查化验',      26.8],
+			{
+				name: '药品收入',
+				y:33.4,
+				sliced: true,
+				selected: true,
+				url: 'http://www.hcharts.cn'
+			},
+			['卫生材料收入', 12.3]
+		]
+	}]
+}, function(c) { // 图表初始化完毕后的会掉函数
+	// 环形图圆心
+	var centerY = c.series[0].center[1],
+		titleHeight = parseInt(c.title.styles.fontSize);
+	// 动态设置标题位置
+	c.setTitle({
+		y:centerY + titleHeight/2
+	});
+});
+</script>
+
+<script>
+	var chart = Highcharts.chart('container-2009-2017-medical-insurance-catalog', {
+	chart: {
+		polar: true,
+		type: 'line',
+		backgroundColor:'rgb(0,0,0,0)'
+	},
+	title: {
+		text: '2009与2017医保目录对比',
+		x: -60
+	},
+	pane: {
+		size: '90%'
+	},
+	xAxis: {
+		categories: ['甲类西药', '甲类中成药', '乙类西药', '乙类中成药'],
+		tickmarkPlacement: 'on',
+		lineWidth: 0
+	},
+	yAxis: {
+		gridLineInterpolation: 'polygon',
+		lineWidth: 0,
+		min: 0
+	},
+	tooltip: {
+		shared: true,
+		pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}种</b><br/>'
+	},
+	legend: {
+		align: 'right',
+		verticalAlign: 'top',
+		y: 70,
+		layout: 'vertical'
+	},
+	series: [{
+		type: 'area',
+		name: '2017年版',
+		data: [402, 192, 886, 1046],
+		pointPlacement: 'on'
+	},{
+		type: 'area',
+		name: '2009年版',
+		data: [349, 154, 791, 886],
+		pointPlacement: 'on'
+	},]
+});
+</script>
+
+<script>
+	Highcharts.setOptions({
+	chart: {
+		inverted: true,
+		marginLeft: 135,
+		type: 'bullet',
+		backgroundColor:'rgba(0,0,0,0)'
+	},
+	title: {
+		text: null
+	},
+	legend: {
+		enabled: false
+	},
+	yAxis: {
+		gridLineWidth: 0
+	},
+	plotOptions: {
+		series: {
+			pointPadding: 0.25,
+			borderWidth: 0,
+			color: '#000',
+			targetOptions: {
+				width: '200%'
+			}
+		}
+	},
+	credits: {
+		enabled: false
+	},
+	exporting: {
+		enabled: false
+	}
+});
+Highcharts.chart('container1', {
+	chart: {
+		marginTop: 40
+	},
+	title: {
+		text: '2009年-2017年医保目录断供药物跌幅'
+	},
+	xAxis: {
+		categories: ['<span class="hc-cat-title">卡托普利</span><br/>']
+	},
+	yAxis: {
+		plotBands: [{
+			from: 0,
+			to: 40,
+			color: '#666'
+		}, {
+			from:40,
+			to:80,
+			color: '#999'
+		}, {
+			from:80,
+			to: 100,
+			color: '#bbb'
+		}],
+		labels: {
+			format: '{value}%'
+		},
+		title: null
+	},
+	series: [{
+		{
+		animation: {
+			duration: 10000,
+			easing: 'easeOutBounce'
+		},
+		data: [{
+			y: 30,
+			target: 90
+		}]
+	}],
+	tooltip: {
+		pointFormat: '<b>{point.y}</b> （跌幅警戒线 {point.target}）'
+	}
+});
+Highcharts.chart('container2', {
+	xAxis: {
+		categories: ['<span class="hc-cat-title">赫赛汀</span><br/>']
+	},
+	yAxis: {
+		plotBands: [{
+			from: 0,
+			to: 40,
+			color: '#666'
+		}, {
+			from: 40,
+			to: 80,
+			color: '#999'
+		}, {
+			from: 80,
+			to: 100,
+			color: '#bbb'
+		}],
+		labels: {
+			format: '{value}%'
+		},
+		title: null
+	},
+	series: [{
+		animation: {
+			duration: 10000,
+			easing: 'easeOutBounce'
+		},
+		data: [{
+			y: 70,
+			target: 60
+		}]
+	}],
+	tooltip: {
+		pointFormat: '<b>{point.y}</b> （跌幅警戒线 {point.target}）'
+	}
+});
+Highcharts.chart('container3', {
+	xAxis: {
+		categories: ['<span class="hc-cat-title">一克装头孢曲松</span><br/>']
+	},
+	yAxis: {
+		plotBands: [{
+			from: 0,
+			to: 40,
+			color: '#666'
+		}, {
+			from: 40,
+			to: 80,
+			color: '#999'
+		}, {
+			from: 80,
+			to: 100,
+			color: '#bbb'
+		}],
+		labels: {
+			format: '{value}%'
+		},
+		title: null
+	},
+	series: [{
+		animation: {
+			duration: 10000,
+			easing: 'easeOutBounce'
+		},
+		data: [{
+			y: 90,
+			target: 90
+		}]
+	}],
+	tooltip: {
+		pointFormat: '<b>{point.y}</b> （跌幅警戒线 {point.target}）'
+	},
+	credits: {
+		enabled: true
+	}
 });
 </script>

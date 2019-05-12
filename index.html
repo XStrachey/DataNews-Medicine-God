@@ -60,6 +60,15 @@
   font-size: 13px;
   font-weight: bold;
 }
+.self-div div {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #000;
+    }
+.self-div img {
+  max-width: 100%;
+  max-height: 100%;
+}
 </style>
 
 
@@ -167,25 +176,27 @@
             <img src="img/7.png" alt="" style="max-height: 535px;">
           </div>
           <div class="col-lg-2 about-img" data-aos="fade-up">
-            <img src="img/6.png" alt="" style="max-height: 535px;">
+            <img src="img/6.png" alt="" style="height: 535px;">
           </div>
           <div class="col-lg-2 about-img" data-aos="fade-left" data-aos-delay="200">
             <img src="img/8.png" alt="" style="max-height: 535px;">
           </div>
-
           <div class="col-lg-6 content" data-aos="fade-left">
             <h2>10年，10亿美元</h2>
             <h3>这是医药圈著名的“双十定律”，代表一款新药研发成功平均耗时成本和经济成本。</h3>
             <p>
               一款药品如果要真正在市场中流通，从研发阶段到开发阶段最后到完全审核通过，往往要超过十年。从平均耗资3-6亿的研究阶段，再到平均5-11亿的开发阶段，企业投入的科研成本不断累加升高，十年研发的总投入高达十亿美元以上。然而，药企不但要投入巨大的时间成本和科研成本还要面临研发审核的挑战——企业研发投入虽大，但新品研发成功率不到2%。因此，在20年的专利保护期内，企业需要通过高定价来收回前期投入。一旦专利保护期一过，国内就可以研发相似药效的仿制药，价格却要比原创药低廉得多。
             </p>
+          </div>
+          <div class="col-lg-6 content" id="container-rare-disease-incidence-drug-price-correlation" style="min-height: 400px;" data-aos="fade-right"></div>
+          <div class="col-lg-6 content" data-aos="fade-left">
             <h2>市场具有局限性</h2>
-            <div id="container-rare-disease-incidence-drug-price-correlation"></div>
             <p>
               药品的价格和该疾病的患病率也基本呈负相关性。以I级肺动脉高压为例，这种发病率为1/10万的疾病并不常见，属于罕见病的一种。相对的，治疗甲型血友病的马昔腾坦片药价也相对偏高，接近三万元人民币一盒。这说明，就算一款新药通过了严格的重重审核可以推出市场，但如果这种疾病的发病率低，需要购买这款药品的消费者少，市场格局就小。为了保证一定的利润空间，药企只能选择提升药品单价来达到总收益的平衡。</br>
               所以并非所有高价药都应该遭受批判，由于凝结了智力成果，它们的定价遵循一定科学的规则，也遵循基本的逐利原则。如果对高价药一竹竿打死，就不存在对于新药研发的利润刺激，最终只会导致药物创新缺乏驱动力。
             </p>
           </div>
+
         </div>
 
       </div>
@@ -252,7 +263,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <img class="advanced-feature-img-right" src="img/5.png" alt="" data-aos="fade-left" style="max-width: 555px;max-height: 555px;">
+              <div class="self-div" align="center"><img class="advanced-feature-img-right" src="img/5.png" alt="" data-aos="fade-left" style="min-width:200px;min-height:200px;max-width: 555px;max-height: 555px;"></div>
               <div data-aos="fade-right">
                 <h2>医改箭在弦上，风雨十五年</h2>
                 <h3>虽然药价虚高的现象依然“野火烧不尽，春风吹又生”，但是正如上述我们提到的“4+7”政策，其实中国政府对药价乱象一直是深恶痛绝。早在2007年，中国政府就意识到问题的严重性。为了让民众吃得上平价药，政府进一步加速了医疗改革，整治药价乱象。</h3>
@@ -405,12 +416,12 @@
     <section id="call-to-action">
       <div class="container">
         <div class="row">
-          <div class="col-lg-9 text-center text-lg-left">
+          <div class="col-lg-12 text-center text-lg-left">
             <h3 class="cta-title">医院的生存困境</h3>
             <p class="cta-text"> 为了贯彻医改政策，不但药企要面临利润倒缩的问题，部分医院也陷入了经济的困境。院长透露：“为了贯彻医改政策，我们这个医院已经出现了运营困难的情况，某些环节甚至还在亏损阶段。” </p>
             <div id="container-Guangdong-hospital-revenue-expenditure-growth"></div>
             <p class="cta-text">中国的公立医院，一般被定义为公益性事业单位。所以中国公立医院的很大一部分收入来源本可以依靠当地政府的财政补贴来达到收支平衡。然而情况远没有那么简单，院长告诉数据小组记者，“财政六项补贴经常不到位，单项补贴的量更是不到位。”财政补贴来源不足，这不是单单佛山一所三甲医院面临的问题，也是很多公立医院存在的普遍问题。2015 －2017 年，全广东省公立医院超出30%亏损，亏损数量不断增加，且亏损额逐年上升。</p>
-              <img src="img/医疗结构-01.gif" />
+              <div align="center"><img src="img/医疗结构-01.gif" /></div>
             <p class="cta-text">更重要的是，医改新政取消了药品加成，这等于将医院在药品方面的15%的利润全数砍去，对于那些本来在药品上就很小盈利空间的医院无疑是雪上加霜。对比起1998年公立医院的药品收入占比，2017年的药品收入占比下降了15.8%。据院长透露，由于取消了药品加成，其中的10%要医院自行消化，实际上医院结余的部分并没有上升，甚至有的医院在倒缩。</p>
           </div>
         </div>
@@ -431,28 +442,28 @@
 
         <div class="row">
 
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="box" data-aos="fade-right">
               <div class="icon"><i class="ion-ios-stopwatch-outline"></i></div>
               <p class="description">医院利润空间不断收缩，医院何以为继？院长给予数据小组记者的答案是：“医院的大多数收入来源于劳务性收入，其中占比很大的一部分来源于诊金。为了能够保持医院的收益平衡，医护人员只能尽量多地接诊患者。”</p>
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="box" data-aos="fade-left">
               <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
               <p class="description">据悉，除了经济发达的一线城市北上深，其他城市大型公立医院的普通门诊诊金基本维持在较低的水平。以12元的诊金为例，到底要接待多少病患才能够支撑医院的日常开支呢？</p>
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="box" data-aos="fade-right">
               <div class="icon"><i class="ion-ios-heart-outline"></i></div>
               <p class="description">院长给了一个数字：“2019年4月12日，我们医院的一个医生一个上午最多接诊了近百个个病人。平常情况下，佛山市南海区的医生，每一个医生每年平均接诊人数是七千多。”</p>
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="box" data-aos="fade-left">
               <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
               <p class="description">这些数字到底意味着什么呢？按照中国的官方标准——中国的卫生部规定：专科医生一小时接诊6个病人，一个上午4个小时，那就是24个病人。按照美国的标准，这样的工作量更是不可想象的。美国的医生一天只能接待8个病人，多出来接待的病人，医疗保险公司是不会支付的。所以按照美国的标准，一个医生最理想的接诊病人一天八个。因此，中国医生的工作量是官方规定的3-4倍，是美国标准的8-10倍。</p>
@@ -1180,7 +1191,7 @@ subtitle: {
   chart: {
     polar: true,
     type: 'line',
-    backgroundColor:'rgb(0,0,0,0)'
+    backgroundColor:'rgba(0,0,0,0)'
   },
   title: {
     text: '2009与2017医保目录对比'
